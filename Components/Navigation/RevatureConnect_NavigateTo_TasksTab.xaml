@@ -1,0 +1,99 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="NavigateToTasksTab" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Argument for passing browser instance" Name="io_Browser" Type="InOutArgument(ui:UiElement)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>825.333333333333,623.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>NavigateToTasksTab_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="This workflow navigates to the task tab in Revature Connect from the Homepage.&#xD;&#xA;&#xD;&#xA;Precondition: User should already be logged into Revature Connect on a Microsoft Edge Browser." DisplayName="NavigateToTasksTab" sap:VirtualizedContainerService.HintSize="476,518.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser - Revature Connect" sap:VirtualizedContainerService.HintSize="434,348" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_Browser]" InteractionMode="Simulate" OutUiElement="[io_Browser]" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <uix:NClick CursorMotionType="{x:Null}" ClickType="Single" DisplayName="Click 'Tasks'" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+            <uix:NClick.Target>
+              <uix:TargetAnchorable DesignTimeRectangle="11, 400, 99, 105" ElementType="Text" FriendlyName="'Tasks'" FullSelectorArgument="&lt;webctrl aaname=' Tasks ' parentid='navigationList' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Tasks ' parentid='navigationList' tag='A' type='' check:text='Tasks' /&gt;" ImageBase64="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" InformativeScreenshot="9eb85f181d0fbc4324503ab4e645f5b8.png" IsNativeTextCaseSensitive="False" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(54) Revature' /&gt;" SearchSteps="FuzzySelector, Image" Text="Tasks" TextMethod="AttributeText">
+                <uix:TargetAnchorable.Anchors>
+                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                    <uix:Target DesignTimeRectangle="19, 456, 84, 25" ElementType="Text" FriendlyName="'Tasks'" FullSelectorArgument="&lt;webctrl aaname='Tasks' parentid='navigationList' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Tasks' parentid='navigationList' tag='SPAN' type='' check:text='Tasks' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFgAAAAdCAYAAAAuAKvrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAMlSURBVGhD7ZdrTxNBFIb9QcZPxk/GD8ZLjMHYYIIxBAOKVVBAW0GoSmorKJRbubZAC3KTQouBFlra0oLKzR913Pcks9kuCyGRaYOZD09K98xsw7Nn3pm9cPGSjRTyUIIlowRLRgmWjBIsGSVYMkqwZJRgySjBkjk3gi9fqaDKqlYqf/Dasn4a7pbV0+NqF129VmVZl4FUwYHgEuXzf46lo3Ocx0Hewvd1Smf2yOHsOnIft3uEUqnf+rz1jZ/U3NLDNdwjqdVqnn7Ux9+8VUtz8wla+ZGlR5UtZCtvonntey5/yPO3cgcUDq/wODFHFlIFo9vwjwOPd4wl4VNcQ0dhXF29h6WhPjEZLbgHahvJX+QfnOPOg6zRsUVqdw9z3SwYD2ssEOH7vaj7xNdwz9W1PD2zu7nubPZRSBNcdu+l/juyKFpEvGvtYxH4NNeGhhcoFsvQgH+WEus7VF3zXq95PwcpqQkWAs0YBUNeX/8MpTZ3qc3Vz/X7tgbuZKwm89xiUHLBFQ+d3F2QDLEQ3PllQq8jCtLpPe5KqyVtFPy1K1QgV4B4iCe26VVjR8H1YlBywR5vgCMAUYDvWLqLkSRdv/GEv6MrR0YXOTcz2X2anYtTY1OnPh+Cs1v7FI2lOcMhWdQEiIp4fJszGKJ9vVNFiQdQUsGQNzO7xhsc/sY11wc/jzNvduj03r5pFpTdOtBFQjDEDg7Nayshx3GAsca5APnteNvNDwgP6rhxZ01JBaNrsbFlNEGoASxxdJp5sxMgJvBA0LHYJI0RgU7F5oYTxEknhDbXAMeO2zNqWT9LSioYubsWz1ODlo0QJBCnAONmZyQ4vmwpGDXkr8hssSrM1NrbOZb+a8Fic7Pa3dHZGOvrmeL6cnSTr0EYNj3IQSRgrFkwgGSsBMSI/bmbHyLiBV2NY95kKEaJxA6/dIg5siiZYGxuiIc3jqMvFhA5/W2VIkspcmq5iU/xkoD8NZ4orAQDcaLAS0q3L0yb6V39RQXCjRulTIom+F+BdJxprWqn5fYd+4nZLINzI/i8ogRLRgmWjBIsGSVYMkqwZJRgySjBUrHRX/GDukbHzhSlAAAAAElFTkSuQmCC" IsNativeTextCaseSensitive="False" SearchSteps="FuzzySelector, Image" Text="Tasks" TextMethod="AttributeText" />
+                  </scg:List>
+                </uix:TargetAnchorable.Anchors>
+              </uix:TargetAnchorable>
+            </uix:NClick.Target>
+          </uix:NClick>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

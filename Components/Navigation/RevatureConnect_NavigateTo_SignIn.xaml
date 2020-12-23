@@ -1,0 +1,138 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="NavigateToRevatureConnect" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property sap2010:Annotation.AnnotationText="Argument for passing browser instance" Name="io_Browser" Type="InOutArgument(ui:UiElement)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>898,929.333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>NavigateToRevatureConnect_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="This workflow opens the login page of Revature Connect on a Microsoft Edge Browser and passes the UiElement in an argument. It logs out if a user is already logged in. " DisplayName="NavigateToRevatureConnect" sap:VirtualizedContainerService.HintSize="762,824.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Opens the login page of Revature Connect and outputs the browser instance." AttachMode="ByInstance" DisplayName="Use Browser Edge: Zoho Accounts" sap:VirtualizedContainerService.HintSize="720,687.333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OutUiElement="[io_Browser]" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State - If logged in" sap:VirtualizedContainerService.HintSize="686,438.666666666667" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="20">
+            <uix:NCheckState.IfExists>
+              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="382,208.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke RevatureConnect_Logout workflow" sap:VirtualizedContainerService.HintSize="340,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Components\RevatureConnect_Logout.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InOutArgument x:TypeArguments="ui:UiElement" x:Key="io_Browser">
+                      <mva:VisualBasicReference x:TypeArguments="ui:UiElement" ExpressionText="io_Browser" />
+                    </InOutArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+              </Sequence>
+            </uix:NCheckState.IfExists>
+            <uix:NCheckState.IfNotExists>
+              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,86" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Sequence>
+            </uix:NCheckState.IfNotExists>
+            <uix:NCheckState.Target>
+              <uix:TargetAnchorable BrowserURL="https://connect.revature.net/" DesignTimeRectangle="110, 206, 351, 49" ElementType="Text" FriendlyName="'My Feed'" FullSelectorArgument="&lt;webctrl aaname='My Feed' parentid='leftTabOptionCont' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='My Feed' parentid='leftTabOptionCont' tag='A' type='' check:text='My Feed' /&gt;" ImageBase64="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" InformativeScreenshot="6a6d1dcffa24fd7daca8c168d007aa1d.png" IsNativeTextCaseSensitive="False" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(54) Revature' /&gt;" SearchSteps="FuzzySelector" Text="My Feed" TextMethod="AttributeText" />
+            </uix:NCheckState.Target>
+          </uix:NCheckState>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH5SURBVDhPVVNNb9NQEPTPKo39zJVwReLeNkfatHBE/AnU1nDixo8ADpyR+BeVajuxYycNQsRZZmafU6i0fe9tZmdnP5zUWbA6S+0+P7YqxT3PrU6fyFeHYz8jhlYF3CcT3IHDO+GDziZ1AMFNikAEV2km3wLEVTqxRY5AkJeZn4xLygzZAC4zgJXRs5VUo3tQwCJkkdB9CySkqYQKJBUk0aHg51Pri1vb3l7bA2zzobA13pt3b21J6VG1FIgto1zW5QT9/Nz2+53Z3v7/w7sKjlEyEIHAHUuWEOVRajd/Y83rc+sur2z7+ZMNYhsOjVXpwEYCr3u8j/Xx3ZydmK06Cfj99Xv0B1sGlAHVIqBT4yE7bAxenZ3a0CEYyXd9Z+3LFyr3nvVzKsCpB3U4OgTxR46tZ/B6o8xDv7J2NhPGcWyg4xNlRjPK/ClOH2U1ndpwd+dNhIJ2dhKb7IFjdvYt4dKIBItBJwEPxXtlZnyLJo5ZHxU4jsunHrgcnytt9+MnQv9Ixba40U6si2tbf7zxJPmRJlXnUOCBcQN54lv49e2Lsvu/f84BimanUiA8zJt4UJFai7qa6TPrLi4kv72a22p+CXulRnKttY0iQQmqC6PRvuPOc2wYp6PehDz62IPHCVBxLCE6BAA7ahvf/Gz1rcTxEkvzLzSzvztjo425nTtGAAAAAElFTkSuQmCC" InformativeScreenshot="247eca355642af1de0ed0138039a2211.png" Selector="&lt;html app='msedge.exe' title='Zoho Accounts'/&gt;" Url="[in_Config(&quot;RevatureConnectURL&quot;).ToString]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

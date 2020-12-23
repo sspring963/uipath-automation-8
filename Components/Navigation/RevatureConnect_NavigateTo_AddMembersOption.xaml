@@ -1,0 +1,134 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="NavigateToAddMemebersOption" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Variable that Browser instance of Revature Connect" Name="io_Browser" Type="InOutArgument(ui:UiElement)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>825.333333333333,1076.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>NavigateToAddMemebersOption_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Windows</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="This workflow navigates to the Add Members window from the newly created Zoho board. This takes in as input the UiElement of the Zoho Board webpage. &#xA;&#xA;Preconditions: The webpage for the newly created board should be open on Microsoft Edge browser." DisplayName="NavigateToAddMembersOption" sap:VirtualizedContainerService.HintSize="476,972" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Attach Microsoft Edge Browser with the Zoho Board webpage using the UiElement argument." AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Edge: Revature Connect" sap:VirtualizedContainerService.HintSize="434,784.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InUiElement="[io_Browser]" InteractionMode="Simulate" OutUiElement="[io_Browser]" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Navigate to Add Members" sap:VirtualizedContainerService.HintSize="376,559.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick CursorMotionType="{x:Null}" sap2010:Annotation.AnnotationText="Click on the 3 dots on the upper right side of the screen." ClickType="Single" DisplayName="Click Three Dots" sap:VirtualizedContainerService.HintSize="334,213.333333333333" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://connect.revature.net/board/newboard/section" DesignTimeRectangle="1766, 201, 52, 52" ElementType="ListItem" FriendlyName="'LI'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li' idx='11' parentid='projectContainer' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li' type='' parentid='projectContainer' tag='LI' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAEVSURBVGhD7ZQxawJBFIT9hWITSZEqXRCRBCxSBKuApX/AIqRIJ4J9IpYRxO4Qg2DhCTkQjjttn8yBxx2EsOylGMIUH8vbmQf7NVtL05P9JyTEjoTYkRA7EmJHQuxIiB0JsSMhdiTEjoTYkdBP7MJvm87mtlgGliTHUoYZ98jRK2bgt10fKgutv7Z2e/dk9WY7Y/gyyh+GE/MlQw99l11fKguNJ+/5g0Dr/tnCfZRlODEXc/Rddn2pLPQx+7TGdSd/1GNvYFF0yDKcmC8Zeui77PpSWSiOE3t9m9jVzYN1un0LVptSjhn3yNFD33XXhz/5FJiQEDsSYkdC7EiIHQmxIyF2JMSOhNiREDsSYkdC7EiIm5OdAc4if0DqQEw5AAAAAElFTkSuQmCC" InformativeScreenshot="0940f2f9c84bc0c7f0d34dd1f43d0510.png" IsNativeTextCaseSensitive="False" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(54) Revature' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NClick CursorMotionType="{x:Null}" sap2010:Annotation.AnnotationText="Click on the 'Add Members' tab on the drop down menu." ClickType="Single" DisplayName="Click 'Add Members'" sap:VirtualizedContainerService.HintSize="333.6,211.2" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://connect.revature.net/board/newboard/section" DesignTimeRectangle="1543, 325, 293, 49" ElementType="ListItem" FriendlyName="'Add Members'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;div&amp;gt;ul&amp;gt;li' idx='10' isleaf='1' parentid='projectContainer' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;div&amp;gt;ul&amp;gt;li' type='' isleaf='1' parentid='projectContainer' tag='LI' aaname='Add Members' check:text='Add Members' /&gt;" ImageBase64="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" InformativeScreenshot="5ba9d934656989aff71a48ca5320dbff.png" IsNativeTextCaseSensitive="False" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(54) Revature' /&gt;" SearchSteps="FuzzySelector, Image" Text="Add Members" TextMethod="AttributeText" />
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

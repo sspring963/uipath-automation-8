@@ -1,0 +1,186 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="AddMembers" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Datatable that contains user emails that were not added" Name="out_InvalidEmails" Type="OutArgument(sd:DataTable)" />
+    <x:Property sap2010:Annotation.AnnotationText="Filepath that points to the CSV file with user emails" Name="in_FilePath" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Variable that contains browser instance for Zoho Board" Name="io_Browser" Type="InOutArgument(ui:UiElement)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>825.333333333333,2386</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>AddMembers_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Windows</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="This workflow bulk adds all the members to the Zoho Board. It takes in as input the filepath of the .csv file containing the emails and the UiElement of the Zoho Board in order to attach the browser. It outputs an argument that contains the emails that were not able to be added in a datatable.&#xA;&#xA;Preconditions: the Add Members window should be open on the Microsoft Edge browser." DisplayName="AddMembers" sap:VirtualizedContainerService.HintSize="551.333333333333,2281.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Attach Microsoft Edge Browser with the Zoho Board webpage using the UiElement arguement" AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Edge: Revature Connect" sap:VirtualizedContainerService.HintSize="509.333333333333,2077.33333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InUiElement="[io_Browser]" InteractionMode="Simulate" OutUiElement="[io_Browser]" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Add members from csv file" sap:VirtualizedContainerService.HintSize="475.333333333333,1852" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick CursorMotionType="{x:Null}" ClickType="Single" DisplayName="Click 'Bulk Import'" sap:VirtualizedContainerService.HintSize="433.333333333333,168" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://connect.revature.net/board/newboard/section" DesignTimeRectangle="1183, 236, 102, 27" FriendlyName="'Bulk Import'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;i' parentid='groupMemberPopup' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;i' parentid='groupMemberPopup' tag='I' type='' aaname='Bulk Import' check:text='Bulk Import' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAAfCAYAAAAPzljlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAUVSURBVGhD7ZmLb1RFFMb9MxWiBjWIUAryUMobwYDQkIBEQS34QBCDQlDRGMWoNIZHBbHh0X1vt+/HtvvqY7c93t/sznb2cvfubrs1veR+yaS3Z87MnXO+M2fO3H1OfHgCPlEegU+UR+AT5RH4RHkEPlEeQQVRo+N5uXk7VdFu3UvL0MiszMzOl7QWh0h8WrYdjErHV0MliahnZPQ1ikJhXh48yspfXWlJZwol6bOLCqIg5fn1PY5tVUuPtJ/uk/GJfEm7MQQiU/LK1qCc6BgoSUQ9I6OvUeSm5mRfe++ix680YE/Xv5mqQedI1DGLkLFkvtzudWfk3ZMJ1Xf4/YRMzzS+u3yi3NH9JCfrdoSq2uJIlOlMjVS6IG2HY/LqtqCEY42nKp8od3TeTbnaUjdRAPkLG3rkzj8Z9T/nFjsOp9mRyc5JcrIgc6WuRohiDGMnreCYr7J5nYhClzF6PXp99nlYm5PcPp51jIzl5WEgp8ZUgx7HnEnraMjnjUlLYLyeg/5oYlrifdNl/1z+Yaw5RJHuDp5IyPqdYRkYnlUyrc9L7GCOlt1htXhQL1HZ3JxKva9tDykHVYMTUVp24Hiv/HkrpeZgfQTX6S8GVf4/ebYYbMhphyybeKd9fE94St7cHy3rMebcpeGnSLDr0dZsCcr3v4yXSQDY2ronIo9DOdn6TlF/XVtY7lpBv+VAVNUA5hym70BdRGHA+W9HZPXGgFz5aawchc0mCid88Nmgkt2+n1ayanAjanVLQBmPU9gRrP2lTQHZ2x6X7YdiSl/LIeCTi0PKpvJ4y861b4fkRuekWj+RD3noXr+RVO8CT0JTKhg27ApL14OM0k0MzEj7mX6l+831BV9h6+vWnG1HYrLnWFx+/n1CzUVxhq3IWCO+pNoma5m1gCNRTg2H/G1VJfrFoJlEaZJebA1I551USaM63IjCIX2DM0oG2Ek7rPP15c1BeWTsUtIUu4E+dMw5IdkE871h7YCdR+JqB3I9OP5Rv6Mu/TjezD7Yiq+onJ1So+kLJzgSxUvMu9SXV0bUdmV7fnxhSBlk6i+VKJx34Wox6v+wUpYZDNXgRpQ9bdQrr6YHOO+ofNe+FVI7jB0JEegzzg58gm8oEgC2Yh/VnRMWRZTpTA3y7eeXh1U/+Rc0gyjG60bpP1vnxVo79f8iCpjOdLLHhN035lgn1OqvmyjAwclBefTDPrX1m0EU83HRu3RtVJ0tZl53g0+UC1FsW7ZvM4nSiyNvk7+bcUYtB1G6j8qNs43GM8eErhpNfP3dqCoo9FWmFhG1+usmigrk1KfFVKVTnybuzPli1aTBwYwBjRAF+Ka4eV9EOWDQenaDdtxyEGUvRkD346wqRiggCFLsxW4Ciy83JrgDcqZv2huR4dGFYqLpRG20HEUFphuTsHj6zHsHf6mCWOxFqxigNP3xt6RyNEY1ShTQJS/lsFOkaiwnUdjZajmZQoDgITBZEy0YXVirDizk6PA/ZTpfcOyZoRYRZCXee+rcgCrgOqwrg2m/I1H2RrVHhPx6c+Kp73yhWOWFD0KZh/vWYogCGIihBIlTKQuWkyiquavW+iEAm0hhu96LS29/5S4DVH+kbPPCij/uP8xWZJlaREGyvgjzvt1H40qmUUHUUsDnEfsnGa/BThy2mJ+U3KA/ey3l5yC39zWNqGcBdqJWEnyiDPhEeQT6V2P7d7aVAJ8oj8AnyiPwifIIfKI8Ap8oj8AnyhMQ+Q8TedG1YpTxxAAAAABJRU5ErkJggg==" InformativeScreenshot="69ae87a6dcdf88413ac9b96d54a9dea8.png" IsNativeTextCaseSensitive="False" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(54) Revature' /&gt;" SearchSteps="FuzzySelector, Image" Text="Bulk Import" TextMethod="AttributeText" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick CursorMotionType="{x:Null}" ClickType="Single" DisplayName="Click 'Upload CSV'" sap:VirtualizedContainerService.HintSize="433.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://connect.revature.net/board/newboard/section" DesignTimeRectangle="543, 389, 132, 45" ElementType="Text" FriendlyName="'Upload CSV'" FullSelectorArgument="&lt;webctrl parentid='inviteUsersPopup' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='inviteUsersPopup' tag='LABEL' type='' aaname='Upload CSV' check:text='Upload CSV' /&gt;" ImageBase64="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" InformativeScreenshot="0827f8207c286b5b9d26f8e8cb0f9cfe.png" IsNativeTextCaseSensitive="False" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(54) Revature' /&gt;" SearchSteps="FuzzySelector, Image" Text="Upload CSV" TextMethod="AttributeText" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NApplicationCard sap2010:Annotation.AnnotationText="Attach the file explorer page that opens." AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Application: File Explorer" sap:VirtualizedContainerService.HintSize="433.6,896" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="Simulate" Version="V1">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Open csv file" sap:VirtualizedContainerService.HintSize="375.2,573.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="{x:Null}" sap2010:Annotation.AnnotationText="Type in the file path of the csv file containing the emails" ClickBeforeMode="None" DisplayName="Type Into 'File name:'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,272" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" Text="[in_FilePath]">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="287, 705, 787, 25" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAxcAAAAdCAYAAADYU5HHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAACySURBVHhe7dcxEQAwCAAx/JumGwJ6PyYuMgsAABCQCwAAIHG5mPEMAADgn1wAAAAJuQAAABJyAQAAJOQCAABIyAUAAJCQCwAAICEXAABAQi4AAICEXAAAAAm5AAAAEnIBAAAk5AIAAEjIBQAAkJALAAAgIRcAAEBCLgAAgIRcAAAACbkAAAAScgEAACTkAgAASMgFAACQkAsAACAhFwAAQEIuAACAhFEAAAAJuQAAAAK7D0Puz7yaFIrDAAAAAElFTkSuQmCC" InformativeScreenshot="401298e0a6d3c58165d02517cf721b29.png" IsNativeTextCaseSensitive="False" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="196, 704, 79, 25" ElementType="Text" FriendlyName="'File &amp;name:'" FullSelectorArgument="&lt;wnd ctrlid='1090' title='File &amp;amp;name:' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1090' title='File &amp;amp;name:' check:text='File &amp;amp;name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAdCAYAAADW4FAcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAGHSURBVGhD7ZbBgYQgDEWpinrohmLohVrsgAXFJcSIOPzZy+bwDsYYkseIY7ZtSwoGlQlEZQJRmUBUJhCVCURlAlGZQJZlBmeSsT5F4d5/o5cZXDImyxFwoeTE5G2+JvJUZkOQaZOPJNahMke8lHlFZTZUJpDXMrk8UWb0ydIzd0L2bx32rPWR5dajhuQYF7qc6G2OuxS2kJyUx/tjz4s53QzX466Al1mbaBLqwlLDhL0Ob3rv5/z4tVgv+BBGY4fMUq8IrXlnX/YUzeK05uMM0zLrUJSBvP76RtzsJl1yXmwE6emQeV1PXgM3A/aXWXe0+yWN4gRedxyvA99seHvN6TOT8YUZviKzG5KAkLlf51r0teQ5CJm895M/lzla8A5eV4zf1P+GzE9mAH+A5s44ic9l1jVRMhdmAMvM7DX4wPmLK4iiTMk8/+qQQff7JUaeXZOZeZzhuoEFvMxCbYby9NrMycywM62cnTxnWWZhOMOMTGUJlQlEZQJRmUBUJhCVCURlwtjSD2faO1tyFVASAAAAAElFTkSuQmCC" IsNativeTextCaseSensitive="False" SearchSteps="Selector, FuzzySelector, Image" Text="File &amp;name:" TextMethod="AttributeText" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                    <uix:NClick CursorMotionType="{x:Null}" ClickType="Single" DisplayName="Click Open" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="1121, 742, 132, 39" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIgAAAArCAYAAACjMsASAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAG6SURBVHhe7djBmYMgEEBhe7IbK9mbrdiKVezZDuyAXQWVgWGWTS4G3+E/oMYceB+QdOu6OqCEQGAiEJhEIN3XN0AgsIkmxCA8sCwLHohAYCIQmAgEJgKBiUBgIhCYCAQmAoGJQGAiEJiaDmQaOtd1iWFSn4WuzUDm0fV7EIObxL3Zjf12vXfjHF9HSYOBTG74Y6XwK0saDzTNBTKPfcXk+4j6cVbuIdZYIGELqThn7KtIP7o5jK+wjm3oMkz5569tLIjetTnfnzz3aVE2Fkj9ypCuNH68TaI8nxzXRSRh0q/vycM8D8hxONOQv+vm2gokTFzNBJQC0T4rV5vCKrVP/hWXDyQ9DNevcHfRZCCvryD62UXcK0WYXE+3sEPp+l21FUjFL5hDOlH/DcRvRzkCubl9AgoTfcnPKm+vIAkCua3X/gfxEWh/oKXnhrpzBIHc2bENZBMRJlcJwQey3ZPhaDHpv0Z+w4y+j0A+gJ9cqXSAPbeR7IyRxHEIkcTiYAikMdYZ5MkIJCAQHYEEBKIjkIBAdAQCE4HARCAwEQhMBAJTdSB4NtGEGCgP43lEE/EASBEITAQCw+p+AEwW3D+Ci8k6AAAAAElFTkSuQmCC" InformativeScreenshot="31ca34164a38f7041c358967ecea3fc8.png" IsNativeTextCaseSensitive="False" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="0, 0, 0, 0" FilePath="C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAVlSURBVEhLldR5TJN3HAbwKqhgKQUUTBYz99/mCZS2XohuDDYUpFwig6lRDGiidBMdbHiBUkROYYgoXstczKYuUyPOQC8KhXKWlrNUDAl14rE5w4yNPPv25RUYOo8n+f7X9/n0d7wv53URKh7JBMo/TALVgFWgNsNb3QtvTQeE2iYsbdAOL2ustqxoUVz51PjbHPaRt4tYMSQVKR5bCYBAaYGX8g68VGZ4VnfCS2Ok0UNcX48lDRqsbL2JwI5LWN19oTnsdtmbIZH8H5NI8QRCxZ9UPkhzlwEWqXoYYGG1Hp6aFgjrtFisU8O3uQoB7ZcR3HMe4X0lw9H9+dFs1csRU7mQKX8MgeI+vJnyfngqbzPAfJURC9R6LNI0QaCth1inIaCCVnENQV3nEHWnEARg4910GVs5FrH8mYn+PZU/gY/iLwIeMICnsg8LVN1U3s4A81StWFDdAq/aOgjrqwmRs8APCDMXE5CDLfdShhMe7BxbiUhulQrlTyGUD1H53/BWPMT8G/346Gov5lWYCOhkil/MfHUrbVM9fLRq2qZb8G+7iEAjraAvFxsG0rD13g4k3k94xNbTbZE/s/oonmLh9YeYXdIGtwNKuB5UwS1djZnpSngcqsL7ZRp8eHMMsY2nRgtR3S2sbLmIgLbTCOvJQUxfKjYPbMe2wQ3Y8SBGRuVWGQGYU24Gb28NnDOawM9qg2u2AW65RszMN8I9Tw+P7Hp4ZMgx50wNW66BoFZBt+kW/Jp/RpDxe0i6ZFjXOwIkWGKx7d56C0d4/dHQ7FITpu9vgNNhA3hZneAf7YZLbg/c8k2YUWiC+zHbdMEjvxWzMtX44KyabpQa3jVKLNNdhq/uPD5vy0Nox0FEde/Cpv54Bki0SMCZe3EQDmmNcEw3givrglNWN3jZPeDnmOCSZ4JbQS9mHDPjvSNNVo+iniOzCvTJ7pnqwbm/ayGovopl2jPwaziDwNYChBj2IdokxZd9W7Gl/wskDoSAM6v4NqbtM8AhvQOOh7vAzZyAHO3EjPifnrHHNZp5lyqHfap/xfK6cvg35iGg8QAkxt00UsT0xGOTORLxd9aC45rTi6n7jZh2sBMOGZ0MMn0c4rT+JJxCClLY3tGIfqnsEmvOYmlNGfxqMxGo24Ogxp2Q6BMQ3b4ecd3R2Gz+DBz7NAOm7GvH1AMdhHSMIIdGEO6OG+CG5IIXXprM9o5GoDwnEyuL4KtOx6qaNPhrdyNIlwBJSyzWtYUhtjMYm7o/sXDsCLDf2/5qRHIMTqGF4EWUlbO9oxHISy1ieTaWK9PwsSYJ/rW7sLo+DqGNEYjSSxBj+Axx7auiOZO/NVrt0owMYk/IlP0dmEqIY7IG3LUFcAovAS+qfOyloQgqC3xFVTIslh/CCuXX8FMlIUCzkYBYAsIRqgsejmwOOMX8eFKq0UQIbIjdOMRhO21PKK0g8oQNsM0V5gE2osoM2ZKqlKHl8q/gp0iEv5oAbRTWaCWW8IbAcR+8VIOMENiQyd+NIdO2VYArKQaPAU4ziHPkqZF/9c5JNVgnpRrGkDQCkhSvAuAcUWZyDj/x2u++65rcCZ/sFIOUBuMR+5Rm2qKi8Vv0AgAB4Icdt/AlJVf4kmIpP7RI6rK2UOoSUqBwCc4bIgCuq4++hDS/QCaxiGPcj3TIx2kVpwig8v8CIICmGASAABAAAkBAO9s6ISkG03jE7psmcCNK6ZrSKmzlbweY2Lb/yYSV2CfrwI08SUgplZ98E9DMtrwhI2fCHDyzklQ9psddoOLjTLlzeOlEwGo7A/bpd0iK7Qob6D0xPLedyZQ9DXBMvEFTAX7itefuSTefEpDF/voV4XD+BdA7JLMpmk2UAAAAAElFTkSuQmCC" InformativeScreenshot="ee55594aeba806de08fecd8480439b00.png" IsExactTitleEnabled="True" Selector="&lt;wnd app='msedge.exe' cls='#32770' title='Open'/&gt;" />
+              </uix:NApplicationCard.TargetApp>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NApplicationCard>
+            <uix:NClick CursorMotionType="{x:Null}" ClickType="Single" DisplayName="Click 'Add Members'" sap:VirtualizedContainerService.HintSize="433.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://connect.revature.net/board/newboard/section" DesignTimeRectangle="1190, 551, 178, 48" ElementType="Button" FriendlyName="'Add Members'" FullSelectorArgument="&lt;webctrl aaname='Add Members' parentid='inviteUsersPopup' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Add Members' parentid='inviteUsersPopup' tag='BUTTON' type='' check:text='Add Members' /&gt;" ImageBase64="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" InformativeScreenshot="d97fdeef4b8b155807b834c8eb64356c.png" IsNativeTextCaseSensitive="False" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(54) Revature' /&gt;" SearchSteps="FuzzySelector, Image" Text="Add Members" TextMethod="AttributeText" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NExtractData sap2010:Annotation.AnnotationText="Extract the emails that were not able to be added. " ContinueOnError="True" DataTable="[out_InvalidEmails]" DisplayName="Extract Table Data" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Email' attr='text'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='span' idx='1'/&gt;&lt;webctrl tag='span' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="433.6,198.4" sap2010:WorkflowViewState.IdRef="NExtractData_2" MaximumResults="100">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="543, 381, 825, 203" ElementType="List" FriendlyName="'UL'" FullSelectorArgument="&lt;webctrl parentid='inviteUsersPopup' tag='UL' /&gt;" InformativeScreenshot="2195b1d099d7a60480b6344d40a706d3.png" IsNativeTextCaseSensitive="False" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(54) Revature' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NExtractData>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

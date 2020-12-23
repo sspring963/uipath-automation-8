@@ -1,0 +1,117 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CreateNewBoard" this:CreateNewBoard.in_BoardName="testboard" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Board name used to create new board." Name="in_BoardName" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Browser instance of Revature Connect" Name="io_Browser" Type="InOutArgument(ui:UiElement)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>825.333333333333,1250.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>CreateNewBoard_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="This workflow creates a new board using a board name string argument as the input and the UiElement for the Revature Connect browser on Microsoft Edge.&#xA;&#xA;Preconditions: User should be already logged in and on the Tasks tab on Revature Connect." DisplayName="CreateNewBoard" sap:VirtualizedContainerService.HintSize="476,1146" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use the Zoho website" sap:VirtualizedContainerService.HintSize="434,958.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_Browser]" InteractionMode="Simulate" OutUiElement="[io_Browser]" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Create a new Zoho board" sap:VirtualizedContainerService.HintSize="376,740.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick CursorMotionType="{x:Null}" ClickType="Single" DisplayName="Navigate to 'New Board'" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://connect.revature.net/tasks" DesignTimeRectangle="74, 980, 187, 40" ElementType="Text" FriendlyName="'New Board'" FullSelectorArgument="&lt;webctrl name='newGrpIcon' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl name='newGrpIcon' tag='LABEL' type='' aaname='New Board' check:text='New Board' /&gt;" ImageBase64="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" InformativeScreenshot="0ccf5298e826b6de1e0822c98dd45b97.png" IsNativeTextCaseSensitive="False" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(91) Tasks - Revature' /&gt;" SearchSteps="FuzzySelector, Image" Text="New Board" TextMethod="AttributeText" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type in the board name" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,230" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[in_BoardName]">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://connect.revature.net/tasks" DesignTimeRectangle="678, 425, 580, 40" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl idx='1' parentid='createProjectCont' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='' parentid='createProjectCont' tag='INPUT' type='text' /&gt;" ImageBase64="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" InformativeScreenshot="dd50ba79f0bbe4b82b71b74c69423b73.png" IsNativeTextCaseSensitive="False" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(91) Tasks - Revature' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="678, 404, 580, 21" ElementType="Text" FriendlyName="'Board Name'" FullSelectorArgument="&lt;webctrl aaname='Board Name' parentid='createProjectCont' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Board Name' parentid='createProjectCont' tag='LABEL' type='' check:text='Board Name' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAkgAAAAZCAYAAADKU9HUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVlSURBVHhe7Z2/a+NmHMbzL/iv0GrIUOjQTPHWmAxn6GKyGDokUzC3mAyHyWBEhmACR6bgDKXKcDh08Q1BXo46EKpMdcqB3HIFlwwa3FZtLvf0/UqvZEmn5JL07tqqzwcesN4f0qvtw/t+lSyAEEIIIYSkoCARQgghhGSgIBFCCCGEZKAgEUIIIYRkoCARQgghhGRICZLvefAS8a90x0fFx/TMhj0cw9MtKXy1tpn+nWUm6/b1BSGEEELIw0gI0hTWWgmlUjrGpw10X+SqygciWoeJkW5JMj2qq74KzNO3RWjUuXkeIYQQQshdyRGkDewPZQdH5dhEzQjb+pd62AfnLoKk+o0GrIlu1FCQCCGEEPI+yBGktGC4B9VASMxT3aCJj+PyjrvkGGziwJl4SO3zyBGYHu9PxhgnpWs2xfjChee7dxMkyZoFV7cLeYIk63TPHbiZo7dg/UGTn36PK32dd1QX92XeixBCCCGF4h2C5MPeMlAymhhEMjMbofuoPJeUkoHqtq3rhXw4T+sox30lGCvqflo+AoFZ7aLXqYT9HXmSmrNXgxHNMcooB7tWtwlSHe1OI5hTUfeIZCUlSDMH+2uZde5EY/W7rjXRWlHvFzy3AWtoYWMxGp++t/fCRDVYVxhjpYVBZgeLEEIIIcUgR5DKqKxWUZUsK8FYbsK6iDUBg00RJiUTL6XNh/tVKCr1o2kwwj3ZR2/oBgXe3rCNJdVXOwz3eUKBUXLxhYn+0IbzSt3jvIuKahMZCSTLs9H+TMbdLkiWmjsKRMtA4yh5/2ieC/tpD/ZE1unB3l5SfTX0XkqfftfoPa5c9IJ3N9B8Ju8RjW+gL5eXAzSVHMVr1OONx4PwmhBCCCGFIkeQamjudtGVbDdRW0zsAnlKFJTMlLaT6uLAlJ2VL/vqDhmulOzI+GCnKBKYdD2TsyciooQn3o3J28maMxckuVKi8kjGhuKTFqQMStZEzsKjwmgHyYrXHM6N7hs9Jxw/fdZQvz9B61DXZqn0t+Xo8YZnEUIIIeQ/zTtrkHBqBjtE1QMXeGWhnhCekLRs+Bd9mOuV1DFbWpDS98+KyY3r0KQFSTGx0BBBWzZhPk7O8zE+NrEhu2CJtTxIkILfS2g80eIYZ5CqgSKEEEJIMbizIC3tOco5bLRENLbsuDZHqUW4S7Q5gKcFqtKxdQH0CKb03SJI4Q5SVR99CfcUJIWv1ijHdKEEhfPCcRWYQ11QrcY8VJD8k5b6baA9nL81IYQQQopLjiDNP/PvH7ZQD4qWo9odH86O1P1U0D4eY+q5sDu1QB5aJ0oezkKZah57wRdf7vN2KC63CJLUIEmd0tKmBWfqYnTY1LJzd0ES3KOwFiqa5+xI8XUzPM6buRg8CQvDHyJI8B2Yy6pf6rHOp/CmYwx2N1DfnRdxE0IIIaQ45AhSMmVU1k304yJtQcnGVm1+hLZYQ+s4Omhy0V+PjrTKSiAGsOQruNsESaQr/vKtjFrHVvIhu0r3E6T5s/W8SX/+RdpiHd3nFlrGAwVJuByhm/gqTv6A5v4ZS7QJIYSQIpIQpPvj5/0NJMH/9+yrvPelXPn/0L9gIYQQQsjH4m8JEiGEEEJIEaEgEUIIIYRkoCARQgghhGR4S5DeMAzDMAzD/M+SJRakN6r39TWCAuTf/gR+/YNhGIZhGKbYEecR9xEHEheKCATpWjX8rjp/mQE/XALf/Qyc/gSMVL5lGIZhGIYpWMRxxHXEecR9xIHEhcSJhAWxJWn40QO+PgfW+8BqD/j8gGEYhmEYptgR5xH3EQcSFxInEjdakC0lsSbpkEHffB9uNxFCCCGEFB1xHnEfcSBxIXGi19fAX89JK2i4U29SAAAAAElFTkSuQmCC" IsNativeTextCaseSensitive="False" SearchSteps="FuzzySelector, Image" Text="Board Name" TextMethod="AttributeText" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick CursorMotionType="{x:Null}" ClickType="Single" DisplayName="Create the board" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://connect.revature.net/tasks" DesignTimeRectangle="1168, 914, 90, 40" ElementType="Button" FriendlyName="'Create'" FullSelectorArgument="&lt;webctrl aaname='Create' parentid='createProjectCont' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Create' parentid='createProjectCont' tag='BUTTON' type='' check:text='Create' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAsCAYAAADsOA+kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPwSURBVHhe7ZvPaxtHFMf7Z5becg1BlJx808EXnUrAB12KMfhQbIIPsSkxJs5lCYhSHIogSBgvTrTJ6ke9SOpa0pL1N+/t7BuNkqlDUu24JPOFL1jzU/7MmzerZfcHeN2JPPg7khX8k5Mr/FwP8dODLn687/01ZnbMkFnatAI+HmZF43sPz62DeX+5mSUzZbamVsBzA1tn7/9uZmtKg+ct4SO9OjNbM+1o8D7aq7cZ9Rq8P0irNzMWafC2ht7rt8iDd2yRB+/YIg/esUUevGOLPHjHFnnwji1yC74xwGlngVRuW+Q3SJM5Wr+/Q83W/hu0yB345hg9A3g2J+v7RjcIn7+291uHgwXNkaP92FLn2CJH4GOcjdU8WTzBVn1Zt7E/QbeToLHSfr3e7eQ08/cI/tlcTTKf4cCA/ol3xuhGC7QOIxx1MqTzHN0Trouw93KO5Jp3So7kcoq95rLfxv4Y7ThXu4jqe60BNoq6GMcd6ldOnw4W6EUznO6ofo3DKcJE9StSHs2rv0tFFjkBryKOov3ib2u99uMUadHwpmjP6gURTmP1OR0xOFoQHi6b44gXUfrkOfq0aEmZvvp/9GjMGKcXZXuSCb7xYoGi6XVGZQv0r/kDpbxn1d4sFDkBfxypOdLO0FqvrSFmCLZLAIczBehNog/g2nMVwgpuiK2D4TJ97f6DhCtHU2wW7YdoF1DNVDNCl4fI5ziWfvUEIS/QYFL2q8ai/2fEx2Ndtv2qDFfaBSqVLA9lcyFrj95i++kYQWumwF+n2C3qLOD3ZYGNMcmFdL9qLHICvkbbuhDl+D1LvbYFvCxacjEhqKs++o12RX2Is1EJrVycQreBl3nGs0/GDE4GlV7aitwcrvUrhDpKR+XBJ3UDBC8TlSos4PXBbKQa03vnCnS/Jb8F6LKVC24Df5++D6+nmWocWeQGPLl2UEJlZeog7MXv9cGX/BXbwTO4KRfeIDmfFlHZOs9oCAJ5EOLoDddxvh9ga2eEICoH1OBDBANV1O9M0W6rS9fdMoVlyQwtjvQ/Z+hTcHD6+nYivjRfs4dJmQpEtAh8+Vf8s1bw5OYV2pJOSqXRBNvFLpkWwETp5YRSD/1h5OpN2jV60fP3ONvncnXJStMvNV0g4PRlzr1mi5yCX/oSjZ13aDRsdbeZ+jUvLeUhNn+NVlPYx6738Iu1LwVE8zN912jRHYH/fi3y4B1b5ME7tsiDd2yRB+/YIg/esUUevGOLPHjHFnnwji3S4P1Dq9Xb+tCqf0y7elsf0/YvJlTrf30xgeWjvjqb0c5aAe9fPlu/mSUzvfXlMxFvCW7sD9yvN7NjhmZ6MWUF71W9PPg7EfABtBRW0kw353EAAAAASUVORK5CYII=" InformativeScreenshot="361b501f9bba620ba88373bbe72cf219.png" IsNativeTextCaseSensitive="False" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(91) Tasks - Revature' /&gt;" SearchSteps="FuzzySelector, Image" Text="Create" TextMethod="AttributeText" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="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" InformativeScreenshot="b7e11b6244c175408ac4c210783d79d0.png" Selector="&lt;html app='msedge.exe' url='https://connect.revature.net/myfeed' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
