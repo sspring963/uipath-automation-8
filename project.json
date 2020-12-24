@@ -1,6 +1,6 @@
 {
-  "name": "RoboticEnterpriseFramework",
-  "description": "Robotic Enterprise Framework",
+  "name": "P3 Zoho Board Automation",
+  "description": "Automation to produce Zoho board for P3 management",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Credentials.Activities": "[1.1.6479.13204]",
