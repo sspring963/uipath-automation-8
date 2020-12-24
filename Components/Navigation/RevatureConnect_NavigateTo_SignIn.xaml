@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>731,877</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>756,924.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NavigateToRevatureConnect_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -80,47 +80,47 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow opens the login page of Revature Connect on a Microsoft Edge Browser and passes the UiElement in an argument. It logs out if a user is already logged in. " DisplayName="NavigateToRevatureConnect" sap:VirtualizedContainerService.HintSize="506,812" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow opens the login page of Revature Connect on a Microsoft Edge Browser and passes the UiElement in an argument. It logs out if a user is already logged in. " DisplayName="NavigateToRevatureConnect" sap:VirtualizedContainerService.HintSize="496.8,820" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Opens the login page of Revature Connect and outputs the browser instance." AttachMode="ByInstance" DisplayName="Use Browser Edge: Zoho Accounts" sap:VirtualizedContainerService.HintSize="464,678" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OutUiElement="[io_Browser]" Version="V1">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Opens the login page of Revature Connect and outputs the browser instance." AttachMode="ByInstance" DisplayName="Use Browser Edge: Zoho Accounts" sap:VirtualizedContainerService.HintSize="455.2,683.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OutUiElement="[io_Browser]" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State - If logged in" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="430,431" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="20">
+          <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Sign in'" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="421.6,435.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="10">
             <uix:NCheckState.IfExists>
-              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="386,205" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="249.6,68.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="344,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Components\RevatureConnect_Logout.xaml">
-                  <ui:InvokeWorkflowFile.Arguments>
-                    <InOutArgument x:TypeArguments="ui:UiElement" x:Key="io_Browser">
-                      <mva:VisualBasicReference x:TypeArguments="ui:UiElement" ExpressionText="io_Browser" />
-                    </InOutArgument>
-                  </ui:InvokeWorkflowFile.Arguments>
-                </ui:InvokeWorkflowFile>
+                <ui:Comment sap:VirtualizedContainerService.HintSize="333.6,56" sap2010:WorkflowViewState.IdRef="Comment_1" Text="User is logged out; move on to sign in.&#xD;&#xA;" />
               </Sequence>
             </uix:NCheckState.IfExists>
             <uix:NCheckState.IfNotExists>
-              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="250,84" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="378.4,207.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="336.8,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Components\RevatureConnect_Logout.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InOutArgument x:TypeArguments="ui:UiElement" x:Key="io_Browser">[io_Browser]</InOutArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
               </Sequence>
             </uix:NCheckState.IfNotExists>
             <uix:NCheckState.Target>
-              <uix:TargetAnchorable BrowserURL="https://connect.revature.net/myfeed" DesignTimeRectangle="74, 136, 234, 32" ElementType="Text" FriendlyName="'My Feed'" FullSelectorArgument="&lt;webctrl aaname='My Feed' parentid='leftTabOptionCont' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='My Feed' parentid='leftTabOptionCont' tag='A' type='' check:text='My Feed' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAO4AAAAkCAYAAACOnQbwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPOSURBVHhe7ZppTxNRFIb9G/on/Dv6SY07RARcANlJUHEPBpcEFJdgiMEtuOCCRESUqCS4Am0ppYXSjW7w9dj3NlOGMmAkOsyN74cn07ln7kw/9Jlzzr3dsHHTZgHp9AIhxOFMBWMKikuIRlBcQjSE4hKiIRSXEA2huIRoCMUlREMoLiEaQnEJ0RCKS4iGUFxCNITi/gE+f0qGhmOSSMxbxgmxC1vEPXvVLyV1ExKYSVnGg7NpKWucUNdZxVdj5HtcdpSOy5aCsSUUVrplKmD9vLXyZjAqVU2TEommLeOE2IVt4kKmjvtBy/iDZyHZWji2ZnELjrnV0Sr+N6G4xCnYJm7FSa8cqPKIayKxJOb1JVU2RvxfiZtMLqhsHwpbl7gQMTCdknh8eRxjiOEaikucgm3i3u4KSlOLT67cCkgqlR3H8XrnjBpHHNdhrKXdr8bMIj3vC0v5ca8qq40x8Dtx33+eU2XzvnK37DnqkvrzPglFsveFgBda/bLzsEvdY/cRl/QORHJz+z9EVQzz9le4peKEl+ISR2CbuCiT8yX7MZaQomqPOkfcyLgYh2zDX+bUeTQ2L3XnfHLvyWzungaYu7fMpea/6o/kwEKSkc1732ZlROZtuzMtN+7OqHPMqTk9mRN51JVUcnomkyrLFtdOSPfLsHqZAFxPcYkTsFVc/PiRcZFNo7FstjMysFlcrNqeujSlMi9iEBiLV5Ap/94Qd1cmUzY2+6S5LZDj68+4Km2RKbtfhHNCt3ZMK/n8mXvhePFaIBd72huWohqPmodsi5fH5NTiM1kqE6dgq7j4jB4XvW57pkSGJEbPaxYXDAzF1HUeb1IJbGTJfPKzuJmHPSH1DAhpyAmwpeMPZDMqRDbHALK1laQUlzgF28UF+IxVZvS3yKjGmFlclK/oaS/fDMihBo8qn42YmdXEHfwYk9J6j2Wmjs3NS0Om37Uqv4GRcc1bShSXOIV1ERdSQpjp4KIA+eICLEhhmwhl80p/elhNXKwkQ1zcG/0tXhLfRhPyaSTbO2Mb6qAp60PI1wMR9f3Q5yLj92S+A+bNhtJSnemHKS5xAusirhVW4qK/hDwom83jZlYTF4y5E2rBaVuxS/1RA6KiVEYMq9adj4JqHH3ytuJx1XMbYva9i8j2EpeqDtBjdz2eldozFJesP7aIu1awNVPZ5M2t+hJCsjhWXGwBYc8VC0tWcUL+ZxwrLrIsFpdYlhKyHMeKSwhZGYpLiIZQXEI0hOISoiEUlxANobiEaAjFJURDKC4hGkJxCdEQikuIhlBcQjQkK25MfgEUr9v6wApKjQAAAABJRU5ErkJggg==" InformativeScreenshot="dd0ec61f402977788b7f2e1defd7906a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(54) Revature' /&gt;" SearchSteps="FuzzySelector" Text="My Feed" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='A' type='' /&gt;" />
+              <uix:TargetAnchorable BrowserURL="https://accounts.zoho.com/signin?hide_signup=true&amp;stop_mredirect=true&amp;portal_id=694077659&amp;hide_secure=true&amp;hide_gsignup=true&amp;servicename=ZohoPulse&amp;serviceurl=https%3A%2F%2Fconnect.revature.net%2F" DesignTimeRectangle="475, 394, 91, 37" ElementType="Text" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl id='headtitle' parentid='login' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='headtitle' parentid='login' tag='SPAN' type='' aaname='Sign in' check:text='Sign in' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF8AAAApCAYAAABTN/UpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARmSURBVGhD7Zm/a+NIFMf1Z6g1pAmkSbcuI0gRwxUrcGNIsZgtgtliMVscYRtjUgRVi6vFpAjIxYGagK440DUGpViwiwWnCGiLFC5SqNhCRYrvjbxjeWYkjaXlzCBHX3hFND8885nMe29mNNRSphq+QtXwFaqGr1A1fIWq4StUDV+havgKVcNXqBq+QsnhPy/g3vTRPTVwqGvQtNh0HJ6Y6F3b8J8iWjFDzz5GFyaMdg+jaUg/Vkw7nkMO/AiLmy4aK9gy02F8dBC80GaJQrgfdKZeD27l+O9+DhnwI/iDJvOj200/txHQ1r+0hHPO1unAWdKiymj3c0jBj+6HOE5+kNibHux5SJZko+iHB6vdYAamofWVxx/NR+gcxf85DZhfZlz7qmjXcxDgR/A+MeA1E/YPWpRSgPEZU1cfwqcltYpJgL+E3WaAtm3yJV/hXW9TVzuGNacFtQpJDv90LPhyQY8urGsrMfeRfifyB0w/mmRXLL1VRtE8oHUPmjAvRqQvEt0iD/2kD7ILn2ibWE82TLHsZQnvSw/mm7VLbKAZZyr//p6zls6BuOdUWbiAM+jCWLkq8l0/hPFuCOd7dqRO+Xx/wEZ4HZ2JFH+uisAPyM5pJnVEa6B7dZkGvJYIf+qgu17ADGsO/NI+uwx8l/xtJOm4aNkcU/DxOEZLaGi8H8GT5fQZ2gY/Duz54LNMBr+IlXeLxeEXsS6cZ9qWKg2fKJh0oGd0oB910L9xMCuwEHL4QrDWmuhNZgjX54WXELOJuCu2wRf6IP/nwS0/D/1qRsuKqRR8vYUhcW8JGTIHT0jZO3/x7i8TfqxwasGUbOPG2S9fmrcM0oHPLS6dFdPUtYJbk+lDDt+8zeqDLPLpps62BEJUcfjHuJxmkOBiFjHi+ljlwl+JBDB/MqS5LtMJY/ofZFDCdoolG3jw1WDK0tsxETdBOfzhPf0uiBvHzuALY0skJDCl4DMKHzzY1z20shbigAAUflw2cP8zU/ZWPB0zquGntbwfo3/CL4J+4YJNqPIHXuIsUcPPU8B3LNx91PBjlYC/vOvDODWo9eFuGWn0T58ZAA9ANvDCQF4TfP66QM+dUKLpJVO/OHw+4Pbh5aVMrwm+OKH0VTGriATO403HmoFx0esFIdXMThPLpZrVh0+Azq74g0GjbcF94K+U8TOAd9XiD2Jn/D2QdOBx/p06ZC02Afs3Dll7AD8WCaTn+Xl9pukGrG+875DDJ8v87f+9XtgT+LFC+NdmgWdEYiTHHz+knfY2+LHkF2tkN3x4VW5HUEjcy8RCr21srnyJ6UcGzItLjP8OuNyeVRH4K+VcKXsxJdkE9x6+YvEBt4qP8HIphR/c2fBzgQpBedvDTgWlDH4ScEnMGN0LziBawv2Tz7rMSRmHUQ0pgh/CeS9kVPGTW3yyPjlMvSXIzxvVlTq38xLA+WhkPtqw1ng3xuInbbNnUh5woyd/dVW9efReZ1MWnPmeRVhByuG/ZtXwFaqGr0zAf+cLfxQkRj2mAAAAAElFTkSuQmCC" InformativeScreenshot="434c924b6e17a78ce284d7e42f260dc4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Zoho Accounts' /&gt;" SearchSteps="FuzzySelector" Text="Sign in" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
             </uix:NCheckState.Target>
           </uix:NCheckState>
         </ActivityAction>
