@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>894,933</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>752,945.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -67,7 +67,7 @@
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Opens Revature Connect on a Micrsoft Browser and logs in using credentials retrieved from Windows Manager Credentials.&#xA;&#xA;Precondition: User should have a generic credential on Windows Credentials Manager for Revature Connect" DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="421,828" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Opens Revature Connect on a Micrsoft Browser and logs in using credentials retrieved from Windows Manager Credentials.&#xA;&#xA;Precondition: User should have a generic credential on Windows Credentials Manager for Revature Connect" DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="420.8,840.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="User Email From Get App Credential Workflow" Name="Email" />
       <Variable x:TypeArguments="ss:SecureString" sap2010:Annotation.AnnotationText="Password from Get App Credentials Workflow" Name="Password" />
@@ -79,27 +79,27 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="379,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GetAppCredentials workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Framework\GetAppCredentials.xaml">
+    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="379.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GetAppCredentials workflow" sap:VirtualizedContainerService.HintSize="379.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Framework\GetAppCredentials.xaml">
       <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_Username">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Email" />
+        </OutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Credential">
           <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;RevatureConnectURL&quot;).ToString" />
         </InArgument>
         <OutArgument x:TypeArguments="ss:SecureString" x:Key="out_Password">
           <mva:VisualBasicReference x:TypeArguments="ss:SecureString" ExpressionText="Password" />
         </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_Email">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Email" />
-        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke RevatureConnect_NavigateTo_SignIn workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Components\Navigation\RevatureConnect_NavigateTo_SignIn.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke RevatureConnect_NavigateTo_SignIn workflow" sap:VirtualizedContainerService.HintSize="379.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Components\Navigation\RevatureConnect_NavigateTo_SignIn.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
         <InOutArgument x:TypeArguments="ui:UiElement" x:Key="io_Browser">[Browser]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke RevatureConnect_SignIn workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Components\RevatureConnect_SignIn.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke RevatureConnect_SignIn workflow" sap:VirtualizedContainerService.HintSize="379.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Components\RevatureConnect_SignIn.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Email">[Email]</InArgument>
         <InArgument x:TypeArguments="ss:SecureString" x:Key="in_Password">[Password]</InArgument>
