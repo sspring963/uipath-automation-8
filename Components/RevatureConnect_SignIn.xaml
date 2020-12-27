@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>912,3018.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1152,3020</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SignInToRevatureConnect_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="39">
@@ -89,20 +89,20 @@
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow signs into Revature Connect using the credentials retrieved from Windows Credentials Manager. It Pauses the execution if 2FA is required and continues when the Revature Connect Homepage appears.&#xA;&#xA;Preconditions: The login page for Revature Connect should be open on a Microsoft Edge browser." DisplayName="SignInToRevatureConnect" sap:VirtualizedContainerService.HintSize="922,2914" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow signs into Revature Connect using the credentials retrieved from Windows Credentials Manager. It Pauses the execution if 2FA is required and continues when the Revature Connect Homepage appears.&#xA;&#xA;Preconditions: The login page for Revature Connect should be open on a Microsoft Edge browser." DisplayName="SignInToRevatureConnect" sap:VirtualizedContainerService.HintSize="922,2915.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Attach the Microsoft Edge Browser with the Revature Connect login page. " AttachMode="ByInstance" DisplayName="Use Browser Edge: Zoho Accounts" sap:VirtualizedContainerService.HintSize="880,2743.33333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_Browser]" InteractionMode="Simulate" OutUiElement="[io_Browser]" Version="V1">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Attach the Microsoft Edge Browser with the Revature Connect login page. " AttachMode="ByInstance" DisplayName="Use Browser Edge: Zoho Accounts" sap:VirtualizedContainerService.HintSize="880,2744.66666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_Browser]" InteractionMode="Simulate" OutUiElement="[io_Browser]" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Sign in and confirm sign in" sap:VirtualizedContainerService.HintSize="846,2494.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Sign in and confirm sign in" sap:VirtualizedContainerService.HintSize="846,2496" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -162,17 +162,11 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke RevatureConnect_InvalidCredentials workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Components\RevatureConnect_InvalidCredentials.xaml">
+                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke RevatureConnect_InvalidCredentials workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Components\RevatureConnect_GetNewCredentials.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
-                            <InOutArgument x:TypeArguments="ss:SecureString" x:Key="io_Password">
-                              <mva:VisualBasicReference x:TypeArguments="ss:SecureString" ExpressionText="in_Password" />
-                            </InOutArgument>
-                            <InOutArgument x:TypeArguments="x:String" x:Key="io_Username">
-                              <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="in_Email" />
-                            </InOutArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_Credential">
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Credentials" />
-                            </InArgument>
+                            <InOutArgument x:TypeArguments="ss:SecureString" x:Key="io_Password">[in_Password]</InOutArgument>
+                            <InOutArgument x:TypeArguments="x:String" x:Key="io_Username">[in_Email]</InOutArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_Credential">[in_Credentials]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
                         <uix:NNavigateBrowser Action="Refresh" DisplayName="Navigate Browser - Refresh" sap:VirtualizedContainerService.HintSize="379.333333333333,83.3333333333333" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" />
