@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>580,2496.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>878,2616</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AddMembers_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -86,7 +86,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow bulk adds all the members to the Zoho Board. It takes in as input the filepath of the .csv file containing the emails and the UiElement of the Zoho Board in order to attach the browser. It outputs an argument that contains the emails that were not able to be added in a datatable.&#xA;&#xA;Preconditions: the Add Members window should be open on the Microsoft Edge browser." DisplayName="AddMembers" sap:VirtualizedContainerService.HintSize="550.4,2392" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow bulk adds all the members to the Zoho Board. It takes in as input the filepath of the .csv file containing the emails and the UiElement of the Zoho Board in order to attach the browser. It outputs an argument that contains the emails that were not able to be added in a datatable.&#xA;&#xA;Preconditions: the Add Members window should be open on the Microsoft Edge browser." DisplayName="AddMembers" sap:VirtualizedContainerService.HintSize="552,2511" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -94,20 +94,27 @@
         <x:Boolean x:Key="IsPinned">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Attach Microsoft Edge Browser with the Zoho Board webpage using the io_Browser  argument" AttachMode="ByInstance" DisplayName="Use Browser Edge: Revature Connect" sap:VirtualizedContainerService.HintSize="508.8,2191.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InUiElement="[io_Browser]" InteractionMode="Simulate" OutUiElement="[io_Browser]" Version="V1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Adding Memebers&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Attach Microsoft Edge Browser with the Zoho Board webpage using the io_Browser  argument" AttachMode="ByInstance" DisplayName="Use Browser Edge: Revature Connect" sap:VirtualizedContainerService.HintSize="510,2186" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InUiElement="[io_Browser]" InteractionMode="Simulate" OutUiElement="[io_Browser]" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Add Members from .csv file" sap:VirtualizedContainerService.HintSize="475.2,1890.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Add Members from .csv file" sap:VirtualizedContainerService.HintSize="476,1888" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ClickType="Single" DisplayName="Click 'Bulk Import'" sap:VirtualizedContainerService.HintSize="433.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+            <uix:NClick ClickType="Single" DisplayName="Click 'Bulk Import'" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://connect.revature.net/board/foo/section" DesignTimeRectangle="1184, 236, 102, 27" FriendlyName="'Bulk Import'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;i' parentid='groupMemberPopup' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;i' parentid='groupMemberPopup' tag='I' type='' aaname='Bulk Import' check:text='Bulk Import' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAAfCAYAAAAPzljlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAUQSURBVGhD7ZmLcxNFHMf9M1UGGR3HB5RaQcbxgYA6gwriCxFFVOSh8hAGkGGQQVArglY6WAs0TfpMW0jfadOENP15n19vm831rmlCohxz35md9PZ27/b3++z+9rfXhyRSKBSBCokiUCFRBCokikCFRBGokKgE1OzsnFy/MS2/Xp0sKbfiMzKRnpW5Obdhldr77W154Y1u6erN6jW/XFNfjYZH8zq+m/GMW/PgqgRUZqYgm7b3ycOrO3zL0y/G5ecrk1UD+2DvoDyxvlNiXTN6zS/X1FejK9fSOq5q+99vYuIGTTpfUI+v65SWv6dkZCyvpX8wJyfPjapTVzbG5FrblNujMkWggkU0e+eTZKAtvqBsZ9q60Dwhj6zpkJ1fVeeYCFSwpjMF2bittzagjGO37OiTmWxBQyB719jErBQKbiNX+fycjI3n9ZlGlYCiH6s5dzc4zvqBor0Zjxmf9zlmbH7Pt/sjxtHpjDM5lNN+QaKfiUBT0x5nONJ3Os81z2BcN2IZBYTo1/BqojagWq5PyYq1MTl0IqXXpj0v4EW2DISjP4y4NcsHdbU1rfWs3Gwu2Dl+oKhj1f/024S8++mA/k2bp5z9tSMxI63t0/o3dZRVTTFp/nPS7V3sf7klLd+dHJZHG4p79JpXEhLvKfUL49t35I5uCaYd/VkdQ6m7bquircfPjmgxz91/LKXJFPdMf1Ns3y0LFDOTATZu7JL1r3fLbXcA9QBFhvnkhrhs251cmG1BCgJF3crnYvKNM6FSI3ndoBn7ui3dstb5PXJ6uKQecN3985mo6b+qqVPe3pWU3mRWbTt7cUyhYj8rA7E6du0bUjC79w+pX2hLwoUNTZu6FnxlbCUaPfNSQr48fEfOXRqX9o6MJhH46TFnzAA22TbvNvIFZYh6y/ufD0h6an6QqNagDCSMKQcJLQWKWW5np6ww6nd8NqAbt9Hp86Naz31k+n/4xWBJqONZB75PKZRLl+fbEroA6m2LgGVHH2Mr7dtuTmudLa8vvPIFBVkcbMhCHgOZUY2vdelZy25fC1DMHmb3ZgeSPRmW0lKg7Pei5dYHtUNkuzh/z6H5c9/hU8MK7ve/0nptizMefmGFMOmMrWR29kQxqgqU7UxbvcmcPOss2+c3O8vfTRRqAQrHUAhXrf8snm1B+q9BeZ3ptceW1zfevl6Vu18RKJb/e3sGdMW13crUDBT7UaInqzHdjuvlFIEKeLk5lNUalBkcsZsYXos9qh6gCHGEuhNO1ob4pa2dNRqRrKx+ObFwlCkHotz9ikC1O5snm70JfQYcdd19xQyFlXfR2XCJ55WAot+xMyPqDDIzOxnwUz1BeZMRkoXtzspnIpFEIGzG9q0f9S86Rpy5MKZ2mOfWBRQOfuvjpKaeplBP7u89d5ABMaANb/boigAm2SEvpX0loJBJeTmXNP+xeKbaqicoxk7KzeczbNq6s1/tpM4kA2ZirWiI6X3a0f7g8ZT6yY4M5UCY5IMc4Pwv43qGYyxGvqAYqLfwEtLQvoGc23peOPbro8UDHwaSIfY45xKyuEpBIYzDSGYrKXuQjFPrAYrMjnMUcLjm+ycHVW8azhcMogcfrGlHwRf0t8N3OVBAtw/CvO/Uj6MLX0hKQN2LMIBw6P0kEzZ5wXk/KS0lJvq9/jso6H01A/WgKGjl/d+KQHkUgQqJzH+N7e9s94MiUCFRBCokikCFRBGokCgCFRJFoEIhkX8Bb7rRLV8w+lIAAAAASUVORK5CYII=" InformativeScreenshot="f1cc7e88ba0ced7ac91753e7e4cf904d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(54) Tasks - Revature' /&gt;" SearchSteps="FuzzySelector, Image" Text="Bulk Import" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='I' type='' /&gt;" />
               </uix:NClick.Target>
