@@ -1,4 +1,4 @@
-# Fork Repositories
+# Adding Users to Zoho Connect
 ## Project Description
 This workflow is designed to set up a Zoho Board and adding user emails to said board.
 
