@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>915.333333333333,2464</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>824.666666666667,1408.66666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SignInToRevatureConnect_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="39">
@@ -89,324 +89,362 @@
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow signs into Revature Connect using the credentials retrieved from Windows Credentials Manager. It Pauses the execution if 2FA is required and continues when the Revature Connect Homepage appears.&#xA;&#xA;Preconditions: The login page for Revature Connect should be open on a Microsoft Edge browser." DisplayName="SignInToRevatureConnect" sap:VirtualizedContainerService.HintSize="834.666666666667,2399.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow signs into Revature Connect using the credentials retrieved from Windows Credentials Manager. It Pauses the execution if 2FA is required and continues when the Revature Connect Homepage appears.&#xA;&#xA;Preconditions: The login page for Revature Connect should be open on a Microsoft Edge browser." DisplayName="SignInToRevatureConnect" sap:VirtualizedContainerService.HintSize="834.666666666667,1344" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Attach the Microsoft Edge Browser with the Revature Connect login page. " AttachMode="ByInstance" DisplayName="Use Browser Edge: Zoho Accounts" sap:VirtualizedContainerService.HintSize="792.666666666667,2231.33333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_Browser]" InteractionMode="Simulate" OutUiElement="[io_Browser]" Version="V1">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Attach the Microsoft Edge Browser with the Revature Connect login page. " AttachMode="ByInstance" DisplayName="Use Browser Edge: Zoho Accounts" sap:VirtualizedContainerService.HintSize="792.666666666667,1173.33333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_Browser]" InteractionMode="Simulate" OutUiElement="[io_Browser]" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Sign in and confirm sign in" sap:VirtualizedContainerService.HintSize="758.666666666667,1979.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Sign in and confirm sign in" sap:VirtualizedContainerService.HintSize="758.666666666667,860.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="716.666666666667,222.666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="716.666666666667,52.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_1">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,144" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="418,906" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Flowchart sap:VirtualizedContainerService.HintSize="672.666666666667,872" sap2010:WorkflowViewState.IdRef="Flowchart_2">
-                    <Flowchart.Variables>
-                      <Variable x:TypeArguments="ui:UiElement" Name="validEmail" />
-                      <Variable x:TypeArguments="ui:UiElement" Name="validPassword" />
-                    </Flowchart.Variables>
+                  <Sequence DisplayName="Enter Credentials" sap:VirtualizedContainerService.HintSize="376,1008" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
-                        <av:Size x:Key="ShapeSize">60,74.6666666666667</av:Size>
-                        <av:PointCollection x:Key="ConnectorLocation">300,77.1666666666667 300,107.166666666667 160,107.166666666667 160,124</av:PointCollection>
-                        <x:Double x:Key="Width">638.51010883707045</x:Double>
-                        <x:Double x:Key="Height">836.2754365362207</x:Double>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Flowchart.StartNode>
-                      <x:Reference>__ReferenceID4</x:Reference>
-                    </Flowchart.StartNode>
-                    <FlowStep x:Name="__ReferenceID0">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type in email" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,230" sap2010:WorkflowViewState.IdRef="NTypeInto_11" Text="[in_Email]">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://accounts.zoho.com/signin?hide_signup=true&amp;stop_mredirect=true&amp;portal_id=694077659&amp;hide_secure=true&amp;hide_gsignup=true&amp;servicename=ZohoPulse&amp;serviceurl=https%3A%2F%2Fconnect.revature.net%2F" DesignTimeRectangle="131, 372, 398, 44" ElementType="InputBox" FriendlyName="'INPUT  login_id'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='email' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='email' aaname='' /&gt;" ImageBase64="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" InformativeScreenshot="dceb9b620a725890f540f679405c676f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Zoho Accounts' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NTypeInto.Target>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">40,554</av:Point>
-                          <av:Size x:Key="ShapeSize">200,52</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">140,606 140,624</av:PointCollection>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NClick ClickType="Single" DisplayName="Click 'Sign in'" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
-                        <uix:NClick.Target>
-                          <uix:TargetAnchorable BrowserURL="https://accounts.zoho.com/signin?hide_signup=true&amp;stop_mredirect=true&amp;portal_id=694077659&amp;hide_secure=true&amp;hide_gsignup=true&amp;servicename=ZohoPulse&amp;serviceurl=https%3A%2F%2Fconnect.revature.net%2F" DesignTimeRectangle="131, 552, 398, 44" ElementType="Button" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl id='nextbtn' parentid='login' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='nextbtn' parentid='login' tag='BUTTON' type='' aaname='Sign in' check:text='Sign in' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZIAAAAwCAYAAAA7IfyrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKqSURBVHhe7dkxUttAAIXhXIKSo3GW3CMFFZegpUlLywFSUYQ2laJ19DZrWdjyupGY7818hWVJNBn9EXwbzMzMbpiQmJnZTTsKyev7MDw8D8P94zDc/QCA/0obSiNKK9rVkJQvBASAS0or2pjUkJTKLF0AAHOlGVkNibcRANYqzchqSJZOBIDPZEICQJdMSADokgkJAF0yIQGgSyYkAHTJhASALpmQANAlExIAumRCAkCXTEgA6JIJCQBdMiEBoEsmJOze91/TP+JpH+Pn+v3P8XM5+Ls5Nnk7nN3sz3iv5vt639nxu1y4cM8i172N57Wfr70PbF0mJOzbSQ3+rcZkKSSfXJM9Tee1gTqKU29Ixl1zH9i6TEjYtafxIVyWh3Z9OOd//wshySmLby7N8TYAZS/jOYdzLwTgXEjK1t4Hti4TEnatfUjnTeLIPCTnHt7lu+b4PACr7jG6FJK194Gty4SEfWveJOraB/MsJPOH/Dk5t7yhvIxvOGWH6zpDcu19YOsyIeFLyDO57pNfbbUP9VybY3XTtUfnNj/g6UIAzoXkmvvA1mVCwtfSPKgPf4tY8autVSEZP+fvMR/TW0VXSMbPa+8DW5cJCbuWXxXVP2DPj81DMkpL2reSg5z7SUjaaw/rDEmx5j6wdZmQsGt5SJ9sisFSSNq3lqXlgb8UgKNrbwjJmvvA1mVCwu6dxCQRKZZCMjnpSXvdaDEAo7zx3BSS0aX7wNZlQgJAl0xIAOiSCQkAXTIhAaBLJiQAdMmEBIAumZAA0CUTEgC6ZEICQJdMSADokgkJAF0yIQGgSyYkAHTJakjuH5dPBIC50oyshuTheflkAJgrzchqSF7fvZUAcFlpRWlGVkNSVr4olREUAOZKG0oj2oiUHYXEzMzs2gmJmZndsGH4C2XRUAsN9XpnAAAAAElFTkSuQmCC" InformativeScreenshot="7fa08d155c2c08206569de9d28f64f49.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Zoho Accounts' /&gt;" SearchSteps="FuzzySelector, Image" Text="Sign in" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;">
-                            <uix:TargetAnchorable.Anchors>
-                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                <uix:Target DesignTimeRectangle="303, 566, 52, 16" ElementType="Text" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl parentid='nextbtn' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='nextbtn' tag='SPAN' type='' aaname='Sign in' check:text='Sign in' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAUCAYAAADY6P5TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFMSURBVFhH7ZQxEgIhDEW9hOf1HtZ7EhvP4AGstbXCBPmZDwSW2a1wNjO/AJJPHrB7Ol9D+GcdgLPrAJxdLuDlGbJ4y9jW7zLWyRfNJT1iNsVHvGjdfIv5MwodTxXqHpLH4xGfGrDq8hcG6QE2ahBLyuODyw5tK6DEmk8FuMiiBsysCKflACLFvWma58Y0bpITc53GWD1AjZ5PBcjFOPlMJWCvOV2j+bKxIQ/RGmDPp36idPIWvHEBWG7eE3L1Rm/yIjRi3UbAER/3J6NCrkXjifJmqMWcRarNcmmDxWmM1QNc82kCmsggvvWBJzoEKGN87+90C5sAZdzzqQBx5fbhlnMloAiMfItRyG0Acm2MjYCqlk/3J5NFatID5Fv2Ao14jWW1OwBbPu4TrSABp/IAkypOrhO5jYnwQnYBijyf9W9wch2As+sAnFshfAHEnhl2NKeAPQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" Text="Sign in" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
-                              </scg:List>
-                            </uix:TargetAnchorable.Anchors>
-                          </uix:TargetAnchorable>
-                        </uix:NClick.Target>
-                      </uix:NClick>
-                      <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID7">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">40,624</av:Point>
-                              <av:Size x:Key="ShapeSize">200,52</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">140,676 140,706 158,706 158,726</av:PointCollection>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'DIV'" FoundElement="[validPassword]" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_3">
-                            <ui:WaitUiElementAppear.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4631a797-0c39-4940-b23d-e14460299ad5" InformativeScreenshot="f4194df30d33d8399651954c4716ac0e" Selector="&lt;webctrl idx='2' isleaf='1' parentid='password_container' tag='DIV' /&gt;">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
-                                <ui:Target.WaitForReady>
-                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                </ui:Target.WaitForReady>
-                              </ui:Target>
-                            </ui:WaitUiElementAppear.Target>
+                    </uix:NTypeInto>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Next'" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://accounts.zoho.com/signin?hide_signup=true&amp;stop_mredirect=true&amp;portal_id=694077659&amp;hide_secure=true&amp;hide_gsignup=true&amp;servicename=ZohoPulse&amp;serviceurl=https%3A%2F%2Fconnect.revature.net%2F" DesignTimeRectangle="131, 446, 398, 44" ElementType="Button" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl id='nextbtn' parentid='login' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='nextbtn' parentid='login' tag='BUTTON' type='' aaname='Next' check:text='Next' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZIAAAAwCAYAAAA7IfyrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJnSURBVHhe7ds9UttQGIXhbCIlS2Mt2UcKKjZBS5OWlgWkoghtKuVexke5Flf8fHTyc2aeiR3JpmH0juXh22JmZvaFCYmZmX1pZyF5eFqW67tlubpZlu8/AeC/3obeiN6KcWtI+gEBAeA9vRVjTNaQ9MrMXgAAW70Z2RoSn0YA+KjejGwNyexEANiTCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQnH9GtZnk+/2/ft8Xjs8fT/t5vnsz3/Pj8nz7sf7XH28l5vvVHb+Fo4gkxIOKYhJMvfdtEfjlVCMkbiJUzD+z+2Y9tzZhMSjiYTEo5pDEnbeBHfC0me77n9czqx/Xvf4pTHs3PXqOwdhwPIhIRj2oSkby8cHw1Jl3Oz3dcICRcgExKOKSFpnxxu813G6aK+F5LZtt+vjLev1ltaM0LCBciEhGMaQtK/H8l1vV/887gSkvX2Vt9bkRASLkAmJBzTJiTrhb09zy2vT9/amhRn91OJkHABMiHhmLYhac4+TbR9NiQ57+WL+yEq09cJCRcgExKOaRKSbrj+vwrJdKcQrBGahWkWCyHhAmRCwjHthOTVHxE274ZkOOHsO5P8jLZXt7iEhAuQCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJdkakqub+YkAsNWbka0hub6bnwwAW70Z2RqShyefSgB4X29Fb0a2hqSvH+iVERQAtnobeiPGiPSdhcTMzOyzExIzM/vCluUfMhjzB9/y3akAAAAASUVORK5CYII=" InformativeScreenshot="a0478044dad1c2de7148c6ac494fbd71.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Zoho Accounts' /&gt;" SearchSteps="FuzzySelector, Image" Text="Next" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="311, 460, 37, 16" ElementType="Text" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl parentid='nextbtn' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='nextbtn' tag='SPAN' type='' aaname='Next' check:text='Next' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAAUCAYAAAAQhBSFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD8SURBVEhL7ZSxFYMwDESzRObNHqmZhCYzMEDq0KZSTsTnCJAJNi4ofO/dwwZJfNmGy/UucnY3yFpukLX8g3yIjPJVj7ENGsL9bjH3ND7nMZyrbxhTU62tQhBzXUh5oyDvwyWQFmBq2tQf8GwZ42kbErIrkILkPOXuFQJx7dE4x15sBHaeJyFVKai9kGrGUsmcLEh03PHshIQUpKflebZbGrfZcy6knkfmaGGOSyDjlqscgOgSyJiEOY9B9nY73SRXswgSnq0ClAvJuOkjNMBuXimk2tReQboKL4kNek07IIcgVz9g+C+kCZidUb4DWm37LsgTu0HWcoOsY5EPS5mZid0UsksAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" Text="Next" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type in password" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,230" sap2010:WorkflowViewState.IdRef="NTypeInto_12" IsPassword="True" SecureText="[in_Password]">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://accounts.zoho.com/signin?hide_signup=true&amp;stop_mredirect=true&amp;portal_id=694077659&amp;hide_secure=true&amp;hide_gsignup=true&amp;servicename=ZohoPulse&amp;serviceurl=https%3A%2F%2Fconnect.revature.net%2F" DesignTimeRectangle="131, 438, 398, 44" ElementType="InputBoxPassword" FriendlyName="'INPUT  password'" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' aaname='' /&gt;" ImageBase64="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" InformativeScreenshot="ed9f46361965715a29d113e174edf3bc.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Zoho Accounts' /&gt;" SearchSteps="FuzzySelector, Image" />
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Sign in'" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://accounts.zoho.com/signin?hide_signup=true&amp;stop_mredirect=true&amp;portal_id=694077659&amp;hide_secure=true&amp;hide_gsignup=true&amp;servicename=ZohoPulse&amp;serviceurl=https%3A%2F%2Fconnect.revature.net%2F" DesignTimeRectangle="131, 552, 398, 44" ElementType="Button" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl id='nextbtn' parentid='login' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='nextbtn' parentid='login' tag='BUTTON' type='' aaname='Sign in' check:text='Sign in' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZIAAAAwCAYAAAA7IfyrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKqSURBVHhe7dkxUttAAIXhXIKSo3GW3CMFFZegpUlLywFSUYQ2laJ19DZrWdjyupGY7818hWVJNBn9EXwbzMzMbpiQmJnZTTsKyev7MDw8D8P94zDc/QCA/0obSiNKK9rVkJQvBASAS0or2pjUkJTKLF0AAHOlGVkNibcRANYqzchqSJZOBIDPZEICQJdMSADokgkJAF0yIQGgSyYkAHTJhASALpmQANAlExIAumRCAkCXTEgA6JIJCQBdMiEBoEsmJOze91/TP+JpH+Pn+v3P8XM5+Ls5Nnk7nN3sz3iv5vt639nxu1y4cM8i172N57Wfr70PbF0mJOzbSQ3+rcZkKSSfXJM9Tee1gTqKU29Ixl1zH9i6TEjYtafxIVyWh3Z9OOd//wshySmLby7N8TYAZS/jOYdzLwTgXEjK1t4Hti4TEnatfUjnTeLIPCTnHt7lu+b4PACr7jG6FJK194Gty4SEfWveJOraB/MsJPOH/Dk5t7yhvIxvOGWH6zpDcu19YOsyIeFLyDO57pNfbbUP9VybY3XTtUfnNj/g6UIAzoXkmvvA1mVCwtfSPKgPf4tY8autVSEZP+fvMR/TW0VXSMbPa+8DW5cJCbuWXxXVP2DPj81DMkpL2reSg5z7SUjaaw/rDEmx5j6wdZmQsGt5SJ9sisFSSNq3lqXlgb8UgKNrbwjJmvvA1mVCwu6dxCQRKZZCMjnpSXvdaDEAo7zx3BSS0aX7wNZlQgJAl0xIAOiSCQkAXTIhAaBLJiQAdMmEBIAumZAA0CUTEgC6ZEICQJdMSADokgkJAF0yIQGgSyYkAHTJakjuH5dPBIC50oyshuTheflkAJgrzchqSF7fvZUAcFlpRWlGVkNSVr4olREUAOZKG0oj2oiUHYXEzMzs2gmJmZndsGH4C2XRUAsN9XpnAAAAAElFTkSuQmCC" InformativeScreenshot="7fa08d155c2c08206569de9d28f64f49.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Zoho Accounts' /&gt;" SearchSteps="FuzzySelector, Image" Text="Sign in" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="303, 566, 52, 16" ElementType="Text" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl parentid='nextbtn' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='nextbtn' tag='SPAN' type='' aaname='Sign in' check:text='Sign in' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAUCAYAAADY6P5TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFMSURBVFhH7ZQxEgIhDEW9hOf1HtZ7EhvP4AGstbXCBPmZDwSW2a1wNjO/AJJPHrB7Ol9D+GcdgLPrAJxdLuDlGbJ4y9jW7zLWyRfNJT1iNsVHvGjdfIv5MwodTxXqHpLH4xGfGrDq8hcG6QE2ahBLyuODyw5tK6DEmk8FuMiiBsysCKflACLFvWma58Y0bpITc53GWD1AjZ5PBcjFOPlMJWCvOV2j+bKxIQ/RGmDPp36idPIWvHEBWG7eE3L1Rm/yIjRi3UbAER/3J6NCrkXjifJmqMWcRarNcmmDxWmM1QNc82kCmsggvvWBJzoEKGN87+90C5sAZdzzqQBx5fbhlnMloAiMfItRyG0Acm2MjYCqlk/3J5NFatID5Fv2Ao14jWW1OwBbPu4TrSABp/IAkypOrhO5jYnwQnYBijyf9W9wch2As+sAnFshfAHEnhl2NKeAPQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" Text="Sign in" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <Flowchart DisplayName="Flowchart - Enter Credentials" sap:VirtualizedContainerService.HintSize="675.333333333333,958" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+              <Flowchart.Variables>
+                <Variable x:TypeArguments="x:Boolean" Name="validEmail" />
+                <Variable x:TypeArguments="x:Boolean" Name="validPassword" />
+                <Variable x:TypeArguments="x:Boolean" Name="isCaptchaVisible" />
+              </Flowchart.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+                  <av:Size x:Key="ShapeSize">60,74.6666666666667</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">300,77.1666666666667 300,107.166666666667 160,107.166666666667 160,124</av:PointCollection>
+                  <x:Double x:Key="Width">641.33333333333314</x:Double>
+                  <x:Double x:Key="Height">922</x:Double>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Flowchart.StartNode>
+                <x:Reference>__ReferenceID4</x:Reference>
+              </Flowchart.StartNode>
+              <FlowStep x:Name="__ReferenceID0">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">60,613.666666666667</av:Point>
+                    <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">160,666.333333333333 160,693.666666666667</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NClick ClickType="Single" DisplayName="Click 'Sign in'" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://accounts.zoho.com/signin?hide_signup=true&amp;stop_mredirect=true&amp;portal_id=694077659&amp;hide_secure=true&amp;hide_gsignup=true&amp;servicename=ZohoPulse&amp;serviceurl=https%3A%2F%2Fconnect.revature.net%2F" DesignTimeRectangle="131, 552, 398, 44" ElementType="Button" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl id='nextbtn' parentid='login' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='nextbtn' parentid='login' tag='BUTTON' type='' aaname='Sign in' check:text='Sign in' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZIAAAAwCAYAAAA7IfyrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKqSURBVHhe7dkxUttAAIXhXIKSo3GW3CMFFZegpUlLywFSUYQ2laJ19DZrWdjyupGY7818hWVJNBn9EXwbzMzMbpiQmJnZTTsKyev7MDw8D8P94zDc/QCA/0obSiNKK9rVkJQvBASAS0or2pjUkJTKLF0AAHOlGVkNibcRANYqzchqSJZOBIDPZEICQJdMSADokgkJAF0yIQGgSyYkAHTJhASALpmQANAlExIAumRCAkCXTEgA6JIJCQBdMiEBoEsmJOze91/TP+JpH+Pn+v3P8XM5+Ls5Nnk7nN3sz3iv5vt639nxu1y4cM8i172N57Wfr70PbF0mJOzbSQ3+rcZkKSSfXJM9Tee1gTqKU29Ixl1zH9i6TEjYtafxIVyWh3Z9OOd//wshySmLby7N8TYAZS/jOYdzLwTgXEjK1t4Hti4TEnatfUjnTeLIPCTnHt7lu+b4PACr7jG6FJK194Gty4SEfWveJOraB/MsJPOH/Dk5t7yhvIxvOGWH6zpDcu19YOsyIeFLyDO57pNfbbUP9VybY3XTtUfnNj/g6UIAzoXkmvvA1mVCwtfSPKgPf4tY8autVSEZP+fvMR/TW0VXSMbPa+8DW5cJCbuWXxXVP2DPj81DMkpL2reSg5z7SUjaaw/rDEmx5j6wdZmQsGt5SJ9sisFSSNq3lqXlgb8UgKNrbwjJmvvA1mVCwu6dxCQRKZZCMjnpSXvdaDEAo7zx3BSS0aX7wNZlQgJAl0xIAOiSCQkAXTIhAaBLJiQAdMmEBIAumZAA0CUTEgC6ZEICQJdMSADokgkJAF0yIQGgSyYkAHTJakjuH5dPBIC50oyshuTheflkAJgrzchqSF7fvZUAcFlpRWlGVkNSVr4olREUAOZKG0oj2oiUHYXEzMzs2gmJmZndsGH4C2XRUAsN9XpnAAAAAElFTkSuQmCC" InformativeScreenshot="7fa08d155c2c08206569de9d28f64f49.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Zoho Accounts' /&gt;" SearchSteps="FuzzySelector, Image" Text="Sign in" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="303, 566, 52, 16" ElementType="Text" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl parentid='nextbtn' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='nextbtn' tag='SPAN' type='' aaname='Sign in' check:text='Sign in' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAUCAYAAADY6P5TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFMSURBVFhH7ZQxEgIhDEW9hOf1HtZ7EhvP4AGstbXCBPmZDwSW2a1wNjO/AJJPHrB7Ol9D+GcdgLPrAJxdLuDlGbJ4y9jW7zLWyRfNJT1iNsVHvGjdfIv5MwodTxXqHpLH4xGfGrDq8hcG6QE2ahBLyuODyw5tK6DEmk8FuMiiBsysCKflACLFvWma58Y0bpITc53GWD1AjZ5PBcjFOPlMJWCvOV2j+bKxIQ/RGmDPp36idPIWvHEBWG7eE3L1Rm/yIjRi3UbAER/3J6NCrkXjifJmqMWcRarNcmmDxWmM1QNc82kCmsggvvWBJzoEKGN87+90C5sAZdzzqQBx5fbhlnMloAiMfItRyG0Acm2MjYCqlk/3J5NFatID5Fv2Ao14jWW1OwBbPu4TrSABp/IAkypOrhO5jYnwQnYBijyf9W9wch2As+sAnFshfAHEnhl2NKeAPQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" Text="Sign in" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NClick.Target>
+                </uix:NClick>
+                <FlowStep.Next>
+                  <FlowStep x:Name="__ReferenceID9">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">60,693.666666666667</av:Point>
+                        <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">160,746.333333333334 160,786.666666666667</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="relativeVisibility" DisplayName="Get Attribute 'INPUT  password'" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetAttribute_2">
+                      <ui:GetAttribute.Result>
+                        <OutArgument x:TypeArguments="x:Boolean">[validPassword]</OutArgument>
+                      </ui:GetAttribute.Result>
+                      <ui:GetAttribute.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="46e0bd6d-e302-4d4a-b418-e4f323885a38" InformativeScreenshot="6f4331751f7bc76b420dcf8e2c2e4f8e" Selector="&lt;webctrl idx='2' isleaf='1' parentid='password_container' tag='DIV' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:GetAttribute.Target>
+                    </ui:GetAttribute>
+                    <FlowStep.Next>
+                      <FlowDecision x:Name="__ReferenceID6" Condition="[not validPassword]" DisplayName="Is Password Correct?" sap:VirtualizedContainerService.HintSize="114.666666666667,86.6666666666667" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <av:Point x:Key="ShapeLocation">102.666666666667,786.666666666667</av:Point>
+                            <av:Size x:Key="ShapeSize">114.666666666667,86.6666666666667</av:Size>
+                            <av:PointCollection x:Key="FalseConnector">217.333333333333,830 490,830 490,606.333333333334</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <FlowDecision.False>
+                          <FlowStep x:Name="__ReferenceID1">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <av:Point x:Key="ShapeLocation">390,553.666666666667</av:Point>
+                                <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
+                                <av:PointCollection x:Key="ConnectorLocation">590,580 620,580 620,266.686666666667 440,266.686666666667 440,236.686666666667</av:PointCollection>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                          </ui:WaitUiElementAppear>
-                          <FlowStep.Next>
-                            <FlowDecision x:Name="__ReferenceID8" DisplayName="Is Password Correct?" sap:VirtualizedContainerService.HintSize="114.666666666667,86.6666666666667" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-                              <FlowDecision.Condition>
-                                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="not validEmail" />
-                              </FlowDecision.Condition>
+                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Components\RevatureConnect_GetNewCredentials.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InOutArgument x:TypeArguments="ss:SecureString" x:Key="io_Password">[in_Password]</InOutArgument>
+                                <InOutArgument x:TypeArguments="x:String" x:Key="io_Username">[in_Email]</InOutArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_Credential">[in_Credentials]</InArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <av:Point x:Key="ShapeLocation">100.666666666667,726</av:Point>
-                                  <av:Size x:Key="ShapeSize">114.666666666667,86.6666666666667</av:Size>
-                                  <av:PointCollection x:Key="FalseConnector">215.333333333333,769.333333333333 420,769.333333333333 420,496.02</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <FlowDecision.False>
-                                <FlowStep x:Name="__ReferenceID1">
+                            </ui:InvokeWorkflowFile>
+                            <FlowStep.Next>
+                              <FlowStep x:Name="__ReferenceID7">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">340,184.02</av:Point>
+                                    <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
+                                    <av:PointCollection x:Key="ConnectorLocation">440,184.02 440,150 260,150</av:PointCollection>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NNavigateBrowser Action="Refresh" DisplayName="Navigate Browser - Refresh" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">320,444.02</av:Point>
-                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">520,470.02 550,470.02 550,266.02 440,266.02 440,236.02</av:PointCollection>
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" WorkflowFileName="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False">
-                                    <ui:InvokeWorkflowFile.Arguments>
-                                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
-                                    </ui:InvokeWorkflowFile.Arguments>
+                                </uix:NNavigateBrowser>
+                                <FlowStep.Next>
+                                  <FlowStep x:Name="__ReferenceID4">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <av:Point x:Key="ShapeLocation">60,124</av:Point>
+                                        <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
+                                        <av:PointCollection x:Key="ConnectorLocation">160,176 160,194</av:PointCollection>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                  </ui:InvokeWorkflowFile>
-                                  <FlowStep.Next>
-                                    <FlowStep x:Name="__ReferenceID9">
+                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type in email" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_9" Text="[in_Email]">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://accounts.zoho.com/signin?hide_signup=true&amp;stop_mredirect=true&amp;portal_id=694077659&amp;hide_secure=true&amp;hide_gsignup=true&amp;servicename=ZohoPulse&amp;serviceurl=https%3A%2F%2Fconnect.revature.net%2F" DesignTimeRectangle="131, 372, 398, 44" ElementType="InputBox" FriendlyName="'INPUT  login_id'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='email' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='email' aaname='' /&gt;" ImageBase64="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" InformativeScreenshot="dceb9b620a725890f540f679405c676f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Zoho Accounts' /&gt;" SearchSteps="FuzzySelector, Image" />
+                                      </uix:NTypeInto.Target>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">340,184.02</av:Point>
-                                          <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">440,184.02 440,150 260,150</av:PointCollection>
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <uix:NNavigateBrowser Action="Refresh" DisplayName="Navigate Browser - Refresh" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1">
+                                    </uix:NTypeInto>
+                                    <FlowStep.Next>
+                                      <FlowStep x:Name="__ReferenceID3">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <av:Point x:Key="ShapeLocation">60,194</av:Point>
+                                            <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
+                                            <av:PointCollection x:Key="ConnectorLocation">160,246.666666666667 160,263.666666666667</av:PointCollection>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                      </uix:NNavigateBrowser>
-                                      <FlowStep.Next>
-                                        <FlowStep x:Name="__ReferenceID4">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:Point x:Key="ShapeLocation">60,124</av:Point>
-                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                              <av:PointCollection x:Key="ConnectorLocation">160,176 160,194</av:PointCollection>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type in email" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NTypeInto_9" Text="[in_Email]">
-                                            <uix:NTypeInto.Target>
-                                              <uix:TargetAnchorable BrowserURL="https://accounts.zoho.com/signin?hide_signup=true&amp;stop_mredirect=true&amp;portal_id=694077659&amp;hide_secure=true&amp;hide_gsignup=true&amp;servicename=ZohoPulse&amp;serviceurl=https%3A%2F%2Fconnect.revature.net%2F" DesignTimeRectangle="131, 372, 398, 44" ElementType="InputBox" FriendlyName="'INPUT  login_id'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='email' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='email' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZIAAAAwCAYAAAA7IfyrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAV5SURBVHhe7Zu7bhs7EIbP+z9KuqQLXKkxEMCN07hIqwh5AAlwt2d53eFwuFyJ2qMj5CPwwRI55AwvM39sIP9MNBqNRqMNNISERqPRaEMtC8nlcplOp9N0PB4BAACaOK1wmpFaFhI3cD6fp8/PTwAAgCZOK5xmpJaFxKmMNQEAAEDjNCM1hAQAAK4GIQEAgCEQEgAAGAIhAQCAIRASAAAYAiEBAIAhEBIAABgCIQEAgCEQEgAAGAIhAQCAIRASAAAYAiEBAIAh7i8kv9+nr99epi9Nfkw/rXn35OOH8PNnev3+Mn19+1PbDRHW/XL4ZYwltthAi5+H+ey+v09HYyyg7/bX9DK/sZcPbfckxNx52vjhr2U3Ifn/JANC8qz0hUSDkAA8AoTkZhCSvUFIAJ6DhwqJLxRzkfU/5znyT19Fny7E0ccyR/m74U9bZQwzVQGLopDGD++GSPRsXKE7TK9vLj5nM3/+HeYe3w7LvJnq/Ko9qz8R9sYt9By1Zx9T2oMbNwUxFe/wM6/lbcu+7p6U/yQkr/JuCht9t4aQaB/mHgTp7fify7z2+4pEP8nupred1ngrY67OTZ1r9VZdfPLc9DjAnXm8kMy2uRCIpNd9+rtcPxThpShfKySpYC3JFhM1J3kUCGGTi8FVNqkAlEWoin/DnouYe+MWsVAu51LHn8Rt7eyWPVmiqPv0Ha37759x+L6soYREn6PhoyLGVcch7qx4XxF1Byn27DuOW321TX1Oy93qt9mKr7QB2JPdhMQ/ZIu1BDATPfbFeb4g6UKgkrhMdF1sNKr4RHxsyY9fTyS3RyX0Fpv4vYzF6kuFN+7BXFvQG68ozzSjzrGIoYne44wukKIvrL3Nf/0+tI2+2xBLMb/3VjTWWeo53mYtrtvedlpDvwW5D/tO1Bu6+j0AjPH430hUovu+osA0is5MSKp5LGInui42a8SimJDJqwuSimuLjS50nlbS+3NM/Utc9j564xpVeDJb9qSx1jL2WbyLbf7rt7DYhLnysxuTftd91P2RDSKxWUiufdvFnQuyP2UvKNa24gPYkecTkrh+Kvbez2qidwrHjPeZ1ozxyNisOPO8GNcWG7PA+lhnGxNZVOI5iPHyjHvjEiMOT3nWewtJz395dqVN8Cc/uzG5bvgsz0Py1EIi9lGQ1rHiA9iRpxMSa856outio2jEK/085DeSVVJBac3rjYc46jMpz+pRv5Gk/votOOTc0r702/LRYYNIbLG55W2HNeo78/cghaQ6EwVCAv8xTyYkunAEQqK1Et2ekzGTLhShHJu30QkebVKsW2yKQhdpnVe3GBhrbR5vFCQVy35Css2/9T6sdWwhafjonZt17vqOrLv2feuxbxOSOja5lnkm+hy6bwfgvjznbyQySaI/l8R2Iulio4jz5XjwIf3EGESs2SbHusXGLmJBCGVhUsXZKFzLv1I3jFvEwrfsu45/PyGZ2eC/f8bh+7KG8tu627U9FW8nomOv1g1+XazJxvLj+1bedlq3uMt4TstZRl9inequrT0A7MhuQuILQIOhZEvf83ou6VRyFYmki41BTNbMvE5d3JXfm/8fiSwKC8HfMreKV8eohKM7bqHvqtjLzkIi+lr+01vwP00bfbdtv3l+bz9WEbZiL857eYPJ5qa37f3Ma33ImK17DL4W/ypeaw8AO3J/IQEAgL8KhAQAAIZASAAAYAiEBAAAhkBIAABgCIQEAACGQEgAAGAIhAQAAIZASAAAYAiEBAAAhkBIAABgCIQEAACGQEgAAGAIhAQAAIZASAAAYAhTSE6n03Q+n80JAAAACacVTjNSy0JyuVz8gFMZAACAFk4rnGakloWERqPRaLRbGkJCo9FotIE2Tf8Cl6JLwJaH14YAAAAASUVORK5CYII=" InformativeScreenshot="dceb9b620a725890f540f679405c676f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Zoho Accounts' /&gt;" SearchSteps="FuzzySelector, Image" />
-                                            </uix:NTypeInto.Target>
+                                        <uix:NClick ClickType="Single" DisplayName="Click 'Next'" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://accounts.zoho.com/signin?hide_signup=true&amp;stop_mredirect=true&amp;portal_id=694077659&amp;hide_secure=true&amp;hide_gsignup=true&amp;servicename=ZohoPulse&amp;serviceurl=https%3A%2F%2Fconnect.revature.net%2F" DesignTimeRectangle="131, 446, 398, 44" ElementType="Button" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl id='nextbtn' parentid='login' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='nextbtn' parentid='login' tag='BUTTON' type='' aaname='Next' check:text='Next' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZIAAAAwCAYAAAA7IfyrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJnSURBVHhe7ds9UttQGIXhbCIlS2Mt2UcKKjZBS5OWlgWkoghtKuVexke5Flf8fHTyc2aeiR3JpmH0juXh22JmZvaFCYmZmX1pZyF5eFqW67tlubpZlu8/AeC/3obeiN6KcWtI+gEBAeA9vRVjTNaQ9MrMXgAAW70Z2RoSn0YA+KjejGwNyexEANiTCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQnH9GtZnk+/2/ft8Xjs8fT/t5vnsz3/Pj8nz7sf7XH28l5vvVHb+Fo4gkxIOKYhJMvfdtEfjlVCMkbiJUzD+z+2Y9tzZhMSjiYTEo5pDEnbeBHfC0me77n9czqx/Xvf4pTHs3PXqOwdhwPIhIRj2oSkby8cHw1Jl3Oz3dcICRcgExKOKSFpnxxu813G6aK+F5LZtt+vjLev1ltaM0LCBciEhGMaQtK/H8l1vV/887gSkvX2Vt9bkRASLkAmJBzTJiTrhb09zy2vT9/amhRn91OJkHABMiHhmLYhac4+TbR9NiQ57+WL+yEq09cJCRcgExKOaRKSbrj+vwrJdKcQrBGahWkWCyHhAmRCwjHthOTVHxE274ZkOOHsO5P8jLZXt7iEhAuQCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJdkakqub+YkAsNWbka0hub6bnwwAW70Z2RqShyefSgB4X29Fb0a2hqSvH+iVERQAtnobeiPGiPSdhcTMzOyzExIzM/vCluUfMhjzB9/y3akAAAAASUVORK5CYII=" InformativeScreenshot="a0478044dad1c2de7148c6ac494fbd71.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Zoho Accounts' /&gt;" SearchSteps="FuzzySelector, Image" Text="Next" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                  <uix:Target DesignTimeRectangle="311, 460, 37, 16" ElementType="Text" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl parentid='nextbtn' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='nextbtn' tag='SPAN' type='' aaname='Next' check:text='Next' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAAUCAYAAAAQhBSFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD8SURBVEhL7ZSxFYMwDESzRObNHqmZhCYzMEDq0KZSTsTnCJAJNi4ofO/dwwZJfNmGy/UucnY3yFpukLX8g3yIjPJVj7ENGsL9bjH3ND7nMZyrbxhTU62tQhBzXUh5oyDvwyWQFmBq2tQf8GwZ42kbErIrkILkPOXuFQJx7dE4x15sBHaeJyFVKai9kGrGUsmcLEh03PHshIQUpKflebZbGrfZcy6knkfmaGGOSyDjlqscgOgSyJiEOY9B9nY73SRXswgSnq0ClAvJuOkjNMBuXimk2tReQboKL4kNek07IIcgVz9g+C+kCZidUb4DWm37LsgTu0HWcoOsY5EPS5mZid0UsksAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" Text="Next" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
+                                                </scg:List>
+                                              </uix:TargetAnchorable.Anchors>
+                                            </uix:TargetAnchorable>
+                                          </uix:NClick.Target>
+                                        </uix:NClick>
+                                        <FlowStep.Next>
+                                          <FlowStep x:Name="__ReferenceID10">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                <av:Point x:Key="ShapeLocation">60,263.666666666667</av:Point>
+                                                <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
+                                                <av:PointCollection x:Key="ConnectorLocation">160,316.333333333333 160,346.333333333333 260,346.333333333333 260,353.666666666667</av:PointCollection>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                          </uix:NTypeInto>
-                                          <FlowStep.Next>
-                                            <FlowStep x:Name="__ReferenceID3">
+                                            <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+                                              <ui:InterruptibleDoWhile.Body>
+                                                <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="relativeVisibility" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="GetAttribute_3">
+                                                  <ui:GetAttribute.Result>
+                                                    <OutArgument x:TypeArguments="x:Boolean">[isCaptchaVisible]</OutArgument>
+                                                  </ui:GetAttribute.Result>
+                                                  <ui:GetAttribute.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c6b6b9c7-60e4-43c3-8382-1501f4733d52" InformativeScreenshot="b5f3301a06f889ea04461543961f68a5" Selector="&lt;webctrl id='captcha' tag='INPUT' type='text' /&gt;">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                      <ui:Target.WaitForReady>
+                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                      </ui:Target.WaitForReady>
+                                                    </ui:Target>
+                                                  </ui:GetAttribute.Target>
+                                                </ui:GetAttribute>
+                                              </ui:InterruptibleDoWhile.Body>
+                                              <ui:InterruptibleDoWhile.Condition>
+                                                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="isCaptchaVisible" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
+                                              </ui:InterruptibleDoWhile.Condition>
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <av:Point x:Key="ShapeLocation">60,194</av:Point>
-                                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                                  <av:PointCollection x:Key="ConnectorLocation">160,246 160,274</av:PointCollection>
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <uix:NClick ClickType="Single" DisplayName="Click 'Next'" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
-                                                <uix:NClick.Target>
-                                                  <uix:TargetAnchorable BrowserURL="https://accounts.zoho.com/signin?hide_signup=true&amp;stop_mredirect=true&amp;portal_id=694077659&amp;hide_secure=true&amp;hide_gsignup=true&amp;servicename=ZohoPulse&amp;serviceurl=https%3A%2F%2Fconnect.revature.net%2F" DesignTimeRectangle="131, 446, 398, 44" ElementType="Button" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl id='nextbtn' parentid='login' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='nextbtn' parentid='login' tag='BUTTON' type='' aaname='Next' check:text='Next' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZIAAAAwCAYAAAA7IfyrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJnSURBVHhe7ds9UttQGIXhbCIlS2Mt2UcKKjZBS5OWlgWkoghtKuVexke5Flf8fHTyc2aeiR3JpmH0juXh22JmZvaFCYmZmX1pZyF5eFqW67tlubpZlu8/AeC/3obeiN6KcWtI+gEBAeA9vRVjTNaQ9MrMXgAAW70Z2RoSn0YA+KjejGwNyexEANiTCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQnH9GtZnk+/2/ft8Xjs8fT/t5vnsz3/Pj8nz7sf7XH28l5vvVHb+Fo4gkxIOKYhJMvfdtEfjlVCMkbiJUzD+z+2Y9tzZhMSjiYTEo5pDEnbeBHfC0me77n9czqx/Xvf4pTHs3PXqOwdhwPIhIRj2oSkby8cHw1Jl3Oz3dcICRcgExKOKSFpnxxu813G6aK+F5LZtt+vjLev1ltaM0LCBciEhGMaQtK/H8l1vV/887gSkvX2Vt9bkRASLkAmJBzTJiTrhb09zy2vT9/amhRn91OJkHABMiHhmLYhac4+TbR9NiQ57+WL+yEq09cJCRcgExKOaRKSbrj+vwrJdKcQrBGahWkWCyHhAmRCwjHthOTVHxE274ZkOOHsO5P8jLZXt7iEhAuQCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJdkakqub+YkAsNWbka0hub6bnwwAW70Z2RqShyefSgB4X29Fb0a2hqSvH+iVERQAtnobeiPGiPSdhcTMzOyzExIzM/vCluUfMhjzB9/y3akAAAAASUVORK5CYII=" InformativeScreenshot="a0478044dad1c2de7148c6ac494fbd71.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Zoho Accounts' /&gt;" SearchSteps="FuzzySelector, Image" Text="Next" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;">
-                                                    <uix:TargetAnchorable.Anchors>
-                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                        <uix:Target DesignTimeRectangle="311, 460, 37, 16" ElementType="Text" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl parentid='nextbtn' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='nextbtn' tag='SPAN' type='' aaname='Next' check:text='Next' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAAUCAYAAAAQhBSFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD8SURBVEhL7ZSxFYMwDESzRObNHqmZhCYzMEDq0KZSTsTnCJAJNi4ofO/dwwZJfNmGy/UucnY3yFpukLX8g3yIjPJVj7ENGsL9bjH3ND7nMZyrbxhTU62tQhBzXUh5oyDvwyWQFmBq2tQf8GwZ42kbErIrkILkPOXuFQJx7dE4x15sBHaeJyFVKai9kGrGUsmcLEh03PHshIQUpKflebZbGrfZcy6knkfmaGGOSyDjlqscgOgSyJiEOY9B9nY73SRXswgSnq0ClAvJuOkjNMBuXimk2tReQboKL4kNek07IIcgVz9g+C+kCZidUb4DWm37LsgTu0HWcoOsY5EPS5mZid0UsksAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" Text="Next" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
-                                                      </scg:List>
-                                                    </uix:TargetAnchorable.Anchors>
-                                                  </uix:TargetAnchorable>
-                                                </uix:NClick.Target>
-                                              </uix:NClick>
-                                              <FlowStep.Next>
-                                                <FlowStep x:Name="__ReferenceID5">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <av:Point x:Key="ShapeLocation">60,274</av:Point>
-                                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                                      <av:PointCollection x:Key="ConnectorLocation">160,326 160,356 244.666666666667,356 244.666666666667,366.666666666667</av:PointCollection>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'DIV'" FoundElement="[validEmail]" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
-                                                    <ui:WaitUiElementAppear.Target>
-                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="695c290a-bcf1-475c-8c29-5d595eb73bf2" InformativeScreenshot="b447c1dee5740a571e00e90f6106c647" Selector="&lt;webctrl id='password' tag='INPUT' type='password' /&gt;">
-                                                        <ui:Target.TimeoutMS>
-                                                          <InArgument x:TypeArguments="x:Int32" />
-                                                        </ui:Target.TimeoutMS>
-                                                        <ui:Target.WaitForReady>
-                                                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                        </ui:Target.WaitForReady>
-                                                      </ui:Target>
-                                                    </ui:WaitUiElementAppear.Target>
+                                            </ui:InterruptibleDoWhile>
+                                            <FlowStep.Next>
+                                              <FlowStep x:Name="__ReferenceID8">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <av:Point x:Key="ShapeLocation">160,353.666666666667</av:Point>
+                                                    <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
+                                                    <av:PointCollection x:Key="ConnectorLocation">260,406.333333333333 260,426.666666666667 270,426.666666666667</av:PointCollection>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="relativeVisibility" DisplayName="Get Attribute 'INPUT  password'" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+                                                  <ui:GetAttribute.Result>
+                                                    <OutArgument x:TypeArguments="x:Boolean">[validEmail]</OutArgument>
+                                                  </ui:GetAttribute.Result>
+                                                  <ui:GetAttribute.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="46e0bd6d-e302-4d4a-b418-e4f323885a38" InformativeScreenshot="108e01fb08dcc1ca45626500002a1b51" Selector="&lt;webctrl id='password' tag='INPUT' type='password' /&gt;">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                      <ui:Target.WaitForReady>
+                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                      </ui:Target.WaitForReady>
+                                                    </ui:Target>
+                                                  </ui:GetAttribute.Target>
+                                                </ui:GetAttribute>
+                                                <FlowStep.Next>
+                                                  <FlowDecision x:Name="__ReferenceID5" Condition="[validEmail]" DisplayName="Does Zoho Email exist?" sap:VirtualizedContainerService.HintSize="128,86.6666666666667" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <av:Point x:Key="ShapeLocation">206,426.666666666667</av:Point>
+                                                        <av:Size x:Key="ShapeSize">128,86.6666666666667</av:Size>
+                                                        <av:PointCollection x:Key="TrueConnector">206,470 160,470 160,533.666666666667</av:PointCollection>
+                                                        <av:PointCollection x:Key="FalseConnector">334,470 490,470 490,553.666666666667</av:PointCollection>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                  </ui:WaitUiElementAppear>
-                                                  <FlowStep.Next>
-                                                    <FlowDecision x:Name="__ReferenceID6" DisplayName="Does Zoho Email exist?" sap:VirtualizedContainerService.HintSize="128,86.6666666666667" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-                                                      <FlowDecision.Condition>
-                                                        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="validEmail" />
-                                                      </FlowDecision.Condition>
-                                                      <sap:WorkflowViewStateService.ViewState>
-                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                          <av:Point x:Key="ShapeLocation">180.666666666667,366.666666666667</av:Point>
-                                                          <av:Size x:Key="ShapeSize">128,86.6666666666667</av:Size>
-                                                          <av:PointCollection x:Key="TrueConnector">180.666666666667,410 140,410 140,474</av:PointCollection>
-                                                          <av:PointCollection x:Key="FalseConnector">308.666666666667,410 420,410 420,444.02</av:PointCollection>
-                                                        </scg:Dictionary>
-                                                      </sap:WorkflowViewStateService.ViewState>
-                                                      <FlowDecision.True>
-                                                        <FlowStep x:Name="__ReferenceID2">
-                                                          <sap:WorkflowViewStateService.ViewState>
-                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                              <av:Point x:Key="ShapeLocation">40,474</av:Point>
-                                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                                              <av:PointCollection x:Key="ConnectorLocation">140,526 140,554</av:PointCollection>
-                                                            </scg:Dictionary>
-                                                          </sap:WorkflowViewStateService.ViewState>
-                                                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type in password" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="NTypeInto_10" IsPassword="True" SecureText="[in_Password]">
-                                                            <uix:NTypeInto.Target>
-                                                              <uix:TargetAnchorable BrowserURL="https://accounts.zoho.com/signin?hide_signup=true&amp;stop_mredirect=true&amp;portal_id=694077659&amp;hide_secure=true&amp;hide_gsignup=true&amp;servicename=ZohoPulse&amp;serviceurl=https%3A%2F%2Fconnect.revature.net%2F" DesignTimeRectangle="131, 438, 398, 44" ElementType="InputBoxPassword" FriendlyName="'INPUT  password'" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZIAAAAwCAYAAAA7IfyrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAZESURBVHhe7dz/b9pGGMfx/P//SCriyqGiIzSoFSllZUOsSbpmKVLUjJTRRmORiKX89sxn++zz+ci3AwWU90kvpfjs8x2Vnk9scLaERqPRaDSPRpDQaDQazavlQRJFkUwmE7m4uAAAYCGVFSozdMuDRHVcX1/Lzc0NAAALqaxQmaFbHiQqZVwHAABgU5mhG0ECAHgwggQA4IUgAQB4IUgAAF4IEgCAF4IEAOCFIAEAeCFIAABeCBIAgBeCBADghSABgA1w9bklte1tqffOJXL0P6WlB8nW1pZzOwDg8cYfQtmOg0QJ35/JXG2fT2V03JdOuyn1IJAgUZdmuyP945FM59VxVmElQVJ/tS+1hfpy5DhusZHstw7lwtkHP1PpteL/k87I0QdgrUSXctiq5WES7IbJFYp+7VaTsD2Qs5+Re8wlWVmQ7J+4+x/qqBMXOoJkRQgSYKNEE+m9ssLiRRwWjaa0D/oy/GMo/YO2NBuBFTKBNH7NrmJWgCB51ggSYGPEITLYC4xwSCW3uaIrmXw9ToJkeHIuV1G8v7rt9XtbwhfFvrVGT85WcLvrSYPkYtBJQuJI/cxvfXWk9131Z0Wusl0ZyX6+PWYHzUk/2dZTIeTqzyQhFRfR5OeisfR+ut+1z/dD63aedftuYb+rkDu2Jcffsn77fAvXb72nnXgfggRYf9G59OpFIAR7fekbt7m2jbBIX4fy7s9Zeux8LMM3RgAFLTn81xrf09MHSVLQdCHLCp1RqKtXJFkRNYpfWuiNYqoKqbWPSx4QPufPQsJcb+mYO/p1mObj69AxtyXrydan+x+8/gVrq+wHYK3EIdLdLUKi/kHfoprJ4Z4RJrHajvk6lO43/dlIJJefWhLovp3lhsnKgiQpUC5G0UqDxPHbtPHbt13Incdkxb0+mKavrTEWqRRgpVT403HtUCzN6a5zPbA/DZZOPIdiXsn5svfNfj9S91i/cx7VUAawRkohUpPmYGJ89fdKhr/ovlT4/kyufh5L+2W2La4jU2O82WlHQr1/0Jbj/4o+H09/RWIXRavglQun47ZPxiy26Rh22FSVjsml58iLci4rulo+p2J79Zj79+v3S81p/8TcZv77jvWXwq28fud7fct4AJ7e9Ld6FhI1aX26tJ4fOZRWFgrmlUgSJket7HV85VE65kbmZ908TMLeuNT3WJsZJPH4TisIkmQfPX42j/KcimPMuZTXf3t/MQ8VGum81bZkDskVkl5LeW6m0pwc66/O2dhOkABrKX92pNZ03IoqgkSFjPnV4LBRz761VQ2S6FtP6tlnKs87SO4qfF5Bkl4BFEW8upZFRTmlQ8O+jbS4P38f1PmycfW25IsI91h/aS2O9XNFAmygv3vGrSj7c42xdMO0r7Y3lMt5OUwSYVfGxnjm1cgyPyfZsCBZVMTTgpj/pv6QILH3S8IjO79znDRoqnMwmbejXKz+7Jz7nY61hvi1ua6Ye/1G+KnXrnlb76t5HEECrK/S5xo7TRlMiocLZ4NGERrqifY3jdLXfYO3p/mzI7eN42vjgsRV/JJxzMLpDICqNEjMsazf0LMrkkohV8fo8R0FujSfu/oT+irFfN+yddrFP5uTuf5KIDrXn53DeC+r6wewjkohsB1I+7P+vGQmpwf6cxS38P1IzgfN8je2lvyk+8qCJC22brpY3idI8sJpHFcUWc0qmg8Jkvj8+fMWil1Uk7HK/WkQGHO097GL/139sUoYOAp/wVq/8z10rb8IrATPkQAbY37Wk8ZOERDB6658+Wee9o2Ppfu2Le127KAvX84n1dtcygqeIVFWEiSu7etIB0m1UAPAGvr3VLqvy0+313ab0vk4lC9nU5n+iI1HcvyxI81dK0hevpPRiv6II0FCkADYKJFc/tWVRmCExD2F+q8GLxlBQpAA2EhzmX4dSrfdkNC45ZXYCaXR7srw6zQOjln5q8FL+sqv6VkHCQA8D0WY1N6eOvr9LD1IAADraC6zH5fpXwZ29j8eQQIA8EKQAAC8ECQAAC8ECQDAC0ECAPBCkAAAvBAkAAAvBAkAwAtBAgDwQpAAALw4g2Qymcj19bXzAAAANJUVKjN0y4MkiqKkQ6UMAACLqKxQmaFbHiQ0Go1Goz2mESQ0Go1G82gi/wPZNKSlCeQoGQAAAABJRU5ErkJggg==" InformativeScreenshot="ed9f46361965715a29d113e174edf3bc.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Zoho Accounts' /&gt;" SearchSteps="FuzzySelector, Image" />
-                                                            </uix:NTypeInto.Target>
-                                                          </uix:NTypeInto>
-                                                          <FlowStep.Next>
-                                                            <x:Reference>__ReferenceID0</x:Reference>
-                                                          </FlowStep.Next>
-                                                        </FlowStep>
-                                                      </FlowDecision.True>
-                                                      <FlowDecision.False>
-                                                        <x:Reference>__ReferenceID1</x:Reference>
-                                                      </FlowDecision.False>
-                                                    </FlowDecision>
-                                                  </FlowStep.Next>
-                                                </FlowStep>
-                                              </FlowStep.Next>
-                                            </FlowStep>
-                                          </FlowStep.Next>
-                                        </FlowStep>
-                                      </FlowStep.Next>
-                                    </FlowStep>
-                                  </FlowStep.Next>
-                                </FlowStep>
-                              </FlowDecision.False>
-                            </FlowDecision>
-                          </FlowStep.Next>
-                        </FlowStep>
-                      </FlowStep.Next>
-                    </FlowStep>
-                    <x:Reference>__ReferenceID2</x:Reference>
-                    <x:Reference>__ReferenceID3</x:Reference>
-                    <x:Reference>__ReferenceID4</x:Reference>
-                    <x:Reference>__ReferenceID5</x:Reference>
-                    <x:Reference>__ReferenceID6</x:Reference>
-                    <x:Reference>__ReferenceID7</x:Reference>
-                    <x:Reference>__ReferenceID8</x:Reference>
-                    <x:Reference>__ReferenceID1</x:Reference>
-                    <x:Reference>__ReferenceID9</x:Reference>
-                  </Flowchart>
-                </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
-            <Sequence DisplayName="Enter Credentials" sap:VirtualizedContainerService.HintSize="716.666666666667,1004" sap2010:WorkflowViewState.IdRef="Sequence_9">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type in email" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,228.666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_5" Text="[in_Email]">
-                <uix:NTypeInto.Target>
-                  <uix:TargetAnchorable BrowserURL="https://accounts.zoho.com/signin?hide_signup=true&amp;stop_mredirect=true&amp;portal_id=694077659&amp;hide_secure=true&amp;hide_gsignup=true&amp;servicename=ZohoPulse&amp;serviceurl=https%3A%2F%2Fconnect.revature.net%2F" DesignTimeRectangle="131, 372, 398, 44" ElementType="InputBox" FriendlyName="'INPUT  login_id'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='email' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='email' aaname='' /&gt;" ImageBase64="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" InformativeScreenshot="dceb9b620a725890f540f679405c676f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Zoho Accounts' /&gt;" SearchSteps="FuzzySelector, Image" />
-                </uix:NTypeInto.Target>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </uix:NTypeInto>
-              <uix:NClick ClickType="Single" DisplayName="Click 'Next'" sap:VirtualizedContainerService.HintSize="334,167.333333333333" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
-                <uix:NClick.Target>
-                  <uix:TargetAnchorable BrowserURL="https://accounts.zoho.com/signin?hide_signup=true&amp;stop_mredirect=true&amp;portal_id=694077659&amp;hide_secure=true&amp;hide_gsignup=true&amp;servicename=ZohoPulse&amp;serviceurl=https%3A%2F%2Fconnect.revature.net%2F" DesignTimeRectangle="131, 446, 398, 44" ElementType="Button" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl id='nextbtn' parentid='login' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='nextbtn' parentid='login' tag='BUTTON' type='' aaname='Next' check:text='Next' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZIAAAAwCAYAAAA7IfyrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJnSURBVHhe7ds9UttQGIXhbCIlS2Mt2UcKKjZBS5OWlgWkoghtKuVexke5Flf8fHTyc2aeiR3JpmH0juXh22JmZvaFCYmZmX1pZyF5eFqW67tlubpZlu8/AeC/3obeiN6KcWtI+gEBAeA9vRVjTNaQ9MrMXgAAW70Z2RoSn0YA+KjejGwNyexEANiTCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQnH9GtZnk+/2/ft8Xjs8fT/t5vnsz3/Pj8nz7sf7XH28l5vvVHb+Fo4gkxIOKYhJMvfdtEfjlVCMkbiJUzD+z+2Y9tzZhMSjiYTEo5pDEnbeBHfC0me77n9czqx/Xvf4pTHs3PXqOwdhwPIhIRj2oSkby8cHw1Jl3Oz3dcICRcgExKOKSFpnxxu813G6aK+F5LZtt+vjLev1ltaM0LCBciEhGMaQtK/H8l1vV/887gSkvX2Vt9bkRASLkAmJBzTJiTrhb09zy2vT9/amhRn91OJkHABMiHhmLYhac4+TbR9NiQ57+WL+yEq09cJCRcgExKOaRKSbrj+vwrJdKcQrBGahWkWCyHhAmRCwjHthOTVHxE274ZkOOHsO5P8jLZXt7iEhAuQCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJZmQAFCSCQkAJdkakqub+YkAsNWbka0hub6bnwwAW70Z2RqShyefSgB4X29Fb0a2hqSvH+iVERQAtnobeiPGiPSdhcTMzOyzExIzM/vCluUfMhjzB9/y3akAAAAASUVORK5CYII=" InformativeScreenshot="a0478044dad1c2de7148c6ac494fbd71.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Zoho Accounts' /&gt;" SearchSteps="FuzzySelector, Image" Text="Next" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;">
-                    <uix:TargetAnchorable.Anchors>
-                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                        <uix:Target DesignTimeRectangle="311, 460, 37, 16" ElementType="Text" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl parentid='nextbtn' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='nextbtn' tag='SPAN' type='' aaname='Next' check:text='Next' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAAUCAYAAAAQhBSFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD8SURBVEhL7ZSxFYMwDESzRObNHqmZhCYzMEDq0KZSTsTnCJAJNi4ofO/dwwZJfNmGy/UucnY3yFpukLX8g3yIjPJVj7ENGsL9bjH3ND7nMZyrbxhTU62tQhBzXUh5oyDvwyWQFmBq2tQf8GwZ42kbErIrkILkPOXuFQJx7dE4x15sBHaeJyFVKai9kGrGUsmcLEh03PHshIQUpKflebZbGrfZcy6knkfmaGGOSyDjlqscgOgSyJiEOY9B9nY73SRXswgSnq0ClAvJuOkjNMBuXimk2tReQboKL4kNek07IIcgVz9g+C+kCZidUb4DWm37LsgTu0HWcoOsY5EPS5mZid0UsksAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" Text="Next" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
-                      </scg:List>
-                    </uix:TargetAnchorable.Anchors>
-                  </uix:TargetAnchorable>
-                </uix:NClick.Target>
-              </uix:NClick>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type in password" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,228.666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_6" IsPassword="True" SecureText="[in_Password]">
-                <uix:NTypeInto.Target>
-                  <uix:TargetAnchorable BrowserURL="https://accounts.zoho.com/signin?hide_signup=true&amp;stop_mredirect=true&amp;portal_id=694077659&amp;hide_secure=true&amp;hide_gsignup=true&amp;servicename=ZohoPulse&amp;serviceurl=https%3A%2F%2Fconnect.revature.net%2F" DesignTimeRectangle="131, 438, 398, 44" ElementType="InputBoxPassword" FriendlyName="'INPUT  password'" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' aaname='' /&gt;" ImageBase64="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" InformativeScreenshot="ed9f46361965715a29d113e174edf3bc.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Zoho Accounts' /&gt;" SearchSteps="FuzzySelector, Image" />
-                </uix:NTypeInto.Target>
-              </uix:NTypeInto>
-              <uix:NClick ClickType="Single" DisplayName="Click 'Sign in'" sap:VirtualizedContainerService.HintSize="334,167.333333333333" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
-                <uix:NClick.Target>
-                  <uix:TargetAnchorable BrowserURL="https://accounts.zoho.com/signin?hide_signup=true&amp;stop_mredirect=true&amp;portal_id=694077659&amp;hide_secure=true&amp;hide_gsignup=true&amp;servicename=ZohoPulse&amp;serviceurl=https%3A%2F%2Fconnect.revature.net%2F" DesignTimeRectangle="131, 552, 398, 44" ElementType="Button" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl id='nextbtn' parentid='login' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='nextbtn' parentid='login' tag='BUTTON' type='' aaname='Sign in' check:text='Sign in' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAZIAAAAwCAYAAAA7IfyrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKqSURBVHhe7dkxUttAAIXhXIKSo3GW3CMFFZegpUlLywFSUYQ2laJ19DZrWdjyupGY7818hWVJNBn9EXwbzMzMbpiQmJnZTTsKyev7MDw8D8P94zDc/QCA/0obSiNKK9rVkJQvBASAS0or2pjUkJTKLF0AAHOlGVkNibcRANYqzchqSJZOBIDPZEICQJdMSADokgkJAF0yIQGgSyYkAHTJhASALpmQANAlExIAumRCAkCXTEgA6JIJCQBdMiEBoEsmJOze91/TP+JpH+Pn+v3P8XM5+Ls5Nnk7nN3sz3iv5vt639nxu1y4cM8i172N57Wfr70PbF0mJOzbSQ3+rcZkKSSfXJM9Tee1gTqKU29Ixl1zH9i6TEjYtafxIVyWh3Z9OOd//wshySmLby7N8TYAZS/jOYdzLwTgXEjK1t4Hti4TEnatfUjnTeLIPCTnHt7lu+b4PACr7jG6FJK194Gty4SEfWveJOraB/MsJPOH/Dk5t7yhvIxvOGWH6zpDcu19YOsyIeFLyDO57pNfbbUP9VybY3XTtUfnNj/g6UIAzoXkmvvA1mVCwtfSPKgPf4tY8autVSEZP+fvMR/TW0VXSMbPa+8DW5cJCbuWXxXVP2DPj81DMkpL2reSg5z7SUjaaw/rDEmx5j6wdZmQsGt5SJ9sisFSSNq3lqXlgb8UgKNrbwjJmvvA1mVCwu6dxCQRKZZCMjnpSXvdaDEAo7zx3BSS0aX7wNZlQgJAl0xIAOiSCQkAXTIhAaBLJiQAdMmEBIAumZAA0CUTEgC6ZEICQJdMSADokgkJAF0yIQGgSyYkAHTJakjuH5dPBIC50oyshuTheflkAJgrzchqSF7fvZUAcFlpRWlGVkNSVr4olREUAOZKG0oj2oiUHYXEzMzs2gmJmZndsGH4C2XRUAsN9XpnAAAAAElFTkSuQmCC" InformativeScreenshot="7fa08d155c2c08206569de9d28f64f49.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Zoho Accounts' /&gt;" SearchSteps="FuzzySelector, Image" Text="Sign in" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;">
-                    <uix:TargetAnchorable.Anchors>
-                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                        <uix:Target DesignTimeRectangle="303, 566, 52, 16" ElementType="Text" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl parentid='nextbtn' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='nextbtn' tag='SPAN' type='' aaname='Sign in' check:text='Sign in' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAUCAYAAADY6P5TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFMSURBVFhH7ZQxEgIhDEW9hOf1HtZ7EhvP4AGstbXCBPmZDwSW2a1wNjO/AJJPHrB7Ol9D+GcdgLPrAJxdLuDlGbJ4y9jW7zLWyRfNJT1iNsVHvGjdfIv5MwodTxXqHpLH4xGfGrDq8hcG6QE2ahBLyuODyw5tK6DEmk8FuMiiBsysCKflACLFvWma58Y0bpITc53GWD1AjZ5PBcjFOPlMJWCvOV2j+bKxIQ/RGmDPp36idPIWvHEBWG7eE3L1Rm/yIjRi3UbAER/3J6NCrkXjifJmqMWcRarNcmmDxWmM1QNc82kCmsggvvWBJzoEKGN87+90C5sAZdzzqQBx5fbhlnMloAiMfItRyG0Acm2MjYCqlk/3J5NFatID5Fv2Ao14jWW1OwBbPu4TrSABp/IAkypOrhO5jYnwQnYBijyf9W9wch2As+sAnFshfAHEnhl2NKeAPQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" Text="Sign in" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
-                      </scg:List>
-                    </uix:TargetAnchorable.Anchors>
-                  </uix:TargetAnchorable>
-                </uix:NClick.Target>
-              </uix:NClick>
-            </Sequence>
-            <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="Delays execution if 2FA is required. It breaks once &quot;My Feed&quot; appears,  proving the user has successfully logged in." DisplayName="Do While - 2FA" sap:VirtualizedContainerService.HintSize="716.666666666667,580.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                                                    <FlowDecision.True>
+                                                      <FlowStep x:Name="__ReferenceID2">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <av:Point x:Key="ShapeLocation">60,533.666666666667</av:Point>
+                                                            <av:Size x:Key="ShapeSize">200,52.6666666666667</av:Size>
+                                                            <av:PointCollection x:Key="ConnectorLocation">160,586.333333333333 160,613.666666666667</av:PointCollection>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type in password" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_10" IsPassword="True" SecureText="[in_Password]">
+                                                          <uix:NTypeInto.Target>
+                                                            <uix:TargetAnchorable BrowserURL="https://accounts.zoho.com/signin?hide_signup=true&amp;stop_mredirect=true&amp;portal_id=694077659&amp;hide_secure=true&amp;hide_gsignup=true&amp;servicename=ZohoPulse&amp;serviceurl=https%3A%2F%2Fconnect.revature.net%2F" DesignTimeRectangle="131, 438, 398, 44" ElementType="InputBoxPassword" FriendlyName="'INPUT  password'" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl id='password' tag='INPUT' type='password' aaname='' /&gt;" ImageBase64="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" InformativeScreenshot="ed9f46361965715a29d113e174edf3bc.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Zoho Accounts' /&gt;" SearchSteps="FuzzySelector, Image" />
+                                                          </uix:NTypeInto.Target>
+                                                        </uix:NTypeInto>
+                                                        <FlowStep.Next>
+                                                          <x:Reference>__ReferenceID0</x:Reference>
+                                                        </FlowStep.Next>
+                                                      </FlowStep>
+                                                    </FlowDecision.True>
+                                                    <FlowDecision.False>
+                                                      <x:Reference>__ReferenceID1</x:Reference>
+                                                    </FlowDecision.False>
+                                                  </FlowDecision>
+                                                </FlowStep.Next>
+                                              </FlowStep>
+                                            </FlowStep.Next>
+                                          </FlowStep>
+                                        </FlowStep.Next>
+                                      </FlowStep>
+                                    </FlowStep.Next>
+                                  </FlowStep>
+                                </FlowStep.Next>
+                              </FlowStep>
+                            </FlowStep.Next>
+                          </FlowStep>
+                        </FlowDecision.False>
+                      </FlowDecision>
+                    </FlowStep.Next>
+                  </FlowStep>
+                </FlowStep.Next>
+              </FlowStep>
+              <x:Reference>__ReferenceID2</x:Reference>
+              <x:Reference>__ReferenceID3</x:Reference>
+              <x:Reference>__ReferenceID4</x:Reference>
+              <x:Reference>__ReferenceID5</x:Reference>
+              <x:Reference>__ReferenceID6</x:Reference>
+              <x:Reference>__ReferenceID1</x:Reference>
+              <x:Reference>__ReferenceID7</x:Reference>
+              <x:Reference>__ReferenceID8</x:Reference>
+              <x:Reference>__ReferenceID9</x:Reference>
+              <x:Reference>__ReferenceID10</x:Reference>
+            </Flowchart>
+            <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="Delays execution if 2FA is required. It breaks once &quot;My Feed&quot; appears,  proving the user has successfully logged in." DisplayName="Do While - 2FA" sap:VirtualizedContainerService.HintSize="716.666666666667,583.333333333333" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
               <ui:InterruptibleDoWhile.Body>
-                <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Feeds'" sap:VirtualizedContainerService.HintSize="680,382" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="30">
+                <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Feeds'" sap:VirtualizedContainerService.HintSize="680,383.333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="30">
                   <uix:NCheckState.IfExists>
                     <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,116.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
                       <sap:WorkflowViewStateService.ViewState>
