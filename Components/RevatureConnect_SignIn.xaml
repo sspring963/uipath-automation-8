@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1097,1292</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>878,1214</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SignInToRevatureConnect_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="39">
@@ -88,26 +88,27 @@
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow signs into Revature Connect using the credentials retrieved from Windows Credentials Manager. It Pauses the execution if 2FA is required and continues when the Revature Connect Homepage appears.&#xA;&#xA;Preconditions: The login page for Revature Connect should be open on a Microsoft Edge browser." DisplayName="SignInToRevatureConnect" sap:VirtualizedContainerService.HintSize="833,1187" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow signs into Revature Connect using the credentials retrieved from Windows Credentials Manager. It Pauses the execution if 2FA is required and continues when the Revature Connect Homepage appears.&#xA;&#xA;Preconditions: The login page for Revature Connect should be open on a Microsoft Edge browser." DisplayName="SignInToRevatureConnect" sap:VirtualizedContainerService.HintSize="476,909" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Attach the Microsoft Edge Browser with the Revature Connect login page. " AttachMode="ByInstance" DisplayName="Use Browser Edge: Zoho Accounts" sap:VirtualizedContainerService.HintSize="791,1023" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_Browser]" InteractionMode="Simulate" OutUiElement="[io_Browser]" Version="V1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Signing In&quot;]" />
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Attach the Microsoft Edge Browser with the Revature Connect login page. " AttachMode="ByInstance" DisplayName="Use Browser Edge: Zoho Accounts" sap:VirtualizedContainerService.HintSize="434,584" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_Browser]" InteractionMode="Simulate" OutUiElement="[io_Browser]" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Sign in and confirm sign in" sap:VirtualizedContainerService.HintSize="757,776" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Sign in and confirm sign in" sap:VirtualizedContainerService.HintSize="242,337" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Enter credentials" sap:VirtualizedContainerService.HintSize="376,996" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Enter credentials" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -153,32 +154,38 @@
                 </uix:NClick.Target>
               </uix:NClick>
             </Sequence>
-            <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="Delays execution if 2FA is required. It breaks once &quot;My Feed&quot; appears,  proving the user has successfully logged in." DisplayName="Do While - 2FA" sap:VirtualizedContainerService.HintSize="715,576" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+            <ui:InterruptibleDoWhile sap2010:Annotation.AnnotationText="Delays execution if 2FA is required. It breaks once &quot;My Feed&quot; appears,  proving the user has successfully logged in." DisplayName="Do While - 2FA" sap:VirtualizedContainerService.HintSize="200,138" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
               <ui:InterruptibleDoWhile.Body>
-                <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Feeds'" sap:VirtualizedContainerService.HintSize="679,380" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="30">
+                <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Feeds'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="30">
                   <uix:NCheckState.IfExists>
-                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="249.6,116.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="250,116" sap2010:WorkflowViewState.IdRef="Sequence_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:Break sap:VirtualizedContainerService.HintSize="208,22.4" sap2010:WorkflowViewState.IdRef="Break_1" />
+                      <ui:Break sap:VirtualizedContainerService.HintSize="208,22" sap2010:WorkflowViewState.IdRef="Break_1" />
                     </Sequence>
                   </uix:NCheckState.IfExists>
                   <uix:NCheckState.IfNotExists>
-                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="375.2,154.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="376,153" sap2010:WorkflowViewState.IdRef="Sequence_4">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Please Authenticate!&quot;]" />
+                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Please Authenticate!&quot;]" />
                     </Sequence>
                   </uix:NCheckState.IfNotExists>
                   <uix:NCheckState.Target>
                     <uix:TargetAnchorable BrowserURL="https://connect.revature.net/" DesignTimeRectangle="15, 202, 70, 20" ElementType="Text" FriendlyName="'Feeds'" FullSelectorArgument="&lt;webctrl aaname='Feeds' parentid='navigationList' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Feeds' parentid='navigationList' tag='SPAN' type='' check:text='Feeds' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAYCAYAAABdlmuNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIJSURBVFhHY5CU0v8/ignj0YAiEo8GFJF4NKCIxKMBRSQeDSgi8WhAEYlHA4pIPBpQROLRgCISUz2glNU9/8fl3fifWv4SjsPTjv2XU7D+7+w3DUUchM3syvHq0TVO/J9Y/BAunlzy5L93xOr/CkoOcDv1TFL+JwHVZNf/BNMmNkUobqIGpnpAqWh4/4/NvQqm0eU8QhaBMbo4Pj0GZun/IzPO/JdXtAXzQbRP5Nr/MTmX/ysoO4L5UVnn/5valoLltQ2i/2vpR6KYQQ085AIKhGVkTYEp7vh/R59J/1WgqVFLLwJFH7UxTQIK5HA9k2QwG4Rl5S3BcqBACks58t/GtRWMDS2y4HoSCu/+d/KZAha3dm78r6jiApbDFlAws0JTDgHZBv/dg+b/z6j++D8gdut/Tb1wFHXUwjQJqKSSR+AACU7cC8agMgQkR5uAgvDVtAL+e4Yu/Z9e9e6/W+BcFLXUwEMy60kDs15Y6tH/zr5TUdSCsKlNyf/IzLPgigBdjhI85AJKSsYIXDYlFN0DpiI/sB5rlxawOEje3rP3f2DcDiDbAG4GNTDdAwpUliA3A0DNA5DalLJn/1MrXsPFYc0DUEClVb4Fyr0Ci4P0hyTtB+rxApsJyqKg1JVe9QGsLi7/JjgA0e2mFFM9oIYrHg0oIvFoQBGJRwOKSDwaUETi0YAiCuv/BwBulB7x/LF+kAAAAABJRU5ErkJggg==" InformativeScreenshot="c9a8914f7e09964a5c2b7bc3f5328daf.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Revature' /&gt;" SearchSteps="FuzzySelector" Text="Feeds" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
                   </uix:NCheckState.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
                 </uix:NCheckState>
               </ui:InterruptibleDoWhile.Body>
               <ui:InterruptibleDoWhile.Condition>
@@ -187,6 +194,8 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InterruptibleDoWhile>
