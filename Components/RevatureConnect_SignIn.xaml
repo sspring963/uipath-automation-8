@@ -212,6 +212,12 @@
                   <uix:NCheckState.Target>
                     <uix:TargetAnchorable BrowserURL="https://connect.revature.net/" DesignTimeRectangle="15, 202, 70, 20" ElementType="Text" FriendlyName="'Feeds'" FullSelectorArgument="&lt;webctrl aaname='Feeds' parentid='navigationList' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Feeds' parentid='navigationList' tag='SPAN' type='' check:text='Feeds' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAYCAYAAABdlmuNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIJSURBVFhHY5CU0v8/ignj0YAiEo8GFJF4NKCIxKMBRSQeDSgi8WhAEYlHA4pIPBpQROLRgCISUz2glNU9/8fl3fifWv4SjsPTjv2XU7D+7+w3DUUchM3syvHq0TVO/J9Y/BAunlzy5L93xOr/CkoOcDv1TFL+JwHVZNf/BNMmNkUobqIGpnpAqWh4/4/NvQqm0eU8QhaBMbo4Pj0GZun/IzPO/JdXtAXzQbRP5Nr/MTmX/ysoO4L5UVnn/5valoLltQ2i/2vpR6KYQQ085AIKhGVkTYEp7vh/R59J/1WgqVFLLwJFH7UxTQIK5HA9k2QwG4Rl5S3BcqBACks58t/GtRWMDS2y4HoSCu/+d/KZAha3dm78r6jiApbDFlAws0JTDgHZBv/dg+b/z6j++D8gdut/Tb1wFHXUwjQJqKSSR+AACU7cC8agMgQkR5uAgvDVtAL+e4Yu/Z9e9e6/W+BcFLXUwEMy60kDs15Y6tH/zr5TUdSCsKlNyf/IzLPgigBdjhI85AJKSsYIXDYlFN0DpiI/sB5rlxawOEje3rP3f2DcDiDbAG4GNTDdAwpUliA3A0DNA5DalLJn/1MrXsPFYc0DUEClVb4Fyr0Ci4P0hyTtB+rxApsJyqKg1JVe9QGsLi7/JjgA0e2mFFM9oIYrHg0oIvFoQBGJRwOKSDwaUETi0YAiCuv/BwBulB7x/LF+kAAAAABJRU5ErkJggg==" InformativeScreenshot="c9a8914f7e09964a5c2b7bc3f5328daf.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Revature' /&gt;" SearchSteps="FuzzySelector" Text="Feeds" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
                   </uix:NCheckState.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
                 </uix:NCheckState>
               </ui:InterruptibleDoWhile.Body>
               <ui:InterruptibleDoWhile.Condition>
@@ -220,6 +226,8 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InterruptibleDoWhile>

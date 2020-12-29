@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>700,752</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>878,742</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>NavigateToTasksTab_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -63,15 +63,24 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow navigates to the task tab in Revature Connect from the Homepage.&#xA;&#xA;Precondition: User should already be logged into Revature Connect on a Microsoft Edge Browser." DisplayName="NavigateToTasksTab" sap:VirtualizedContainerService.HintSize="476,506" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow navigates to the task tab in Revature Connect from the Homepage.&#xA;&#xA;Precondition: User should already be logged into Revature Connect on a Microsoft Edge Browser." DisplayName="NavigateToTasksTab" sap:VirtualizedContainerService.HintSize="476,637" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Navigating to Tasks Tab&quot;]" />
     <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser - Revature Connect" sap:VirtualizedContainerService.HintSize="434,342" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_Browser]" InteractionMode="Simulate" OutUiElement="[io_Browser]" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
@@ -82,7 +91,7 @@
             <uix:NClick.Target>
               <uix:TargetAnchorable BrowserURL="https://connect.revature.net/myfeed" DesignTimeRectangle="8, 266, 66, 70" ElementType="Text" FriendlyName="'Tasks'" FullSelectorArgument="&lt;webctrl aaname=' Tasks ' parentid='navigationList' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Tasks ' parentid='navigationList' tag='A' type='' check:text='Tasks' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAABKCAYAAAAG7CL/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANoSURBVHhe7ZnbT1NBEIf9f4wvxkd9MMTEQExQA1iNJAZiQIx4446gIshF7iIWBAFbhJarRSmFQhNFRf8dwuvIb3BPuOz0hdMewWnyJefszm7ZL9s5Z4cT5kPbn5Onsv97Nje3mL9aVIxBxQioGAEVI6BiBFSMgIoRUDECKkZAxQioGAEVI6BiBFSMgIoRUDECKkZAxQioGIF/Qsy9+80UCC5QbPk7JRK/GVyjDX22ManGUzHZV0rpQyBCa4lfjpD9oA8xiLXNkSo8E5OT94hmZlasMmwgFmNsc6UCT8ScPpNLo2PzVgHJwBiMtc3pNp6IqajsoJX4T+vi97O8/IPiqxt8jTEYa5vTbTwRg5yxX4CNiclFzi3+gbDThrG2Od0m7WKu5jyg+U+rewTYCI5/pqxLJVRT28O7xrRjLOawze0maRdzq+AJRZfWnYUuLn6lN/2TThueQnhMZ1woPCAFIA5z2OZ2E8/FYAfgaVNW3k7R6DcaGZ1nKc8a+g9IAcdWjO2nNDsXZzl5vscspenloJicj+1PCdiSL+T4rpcnlQKObfIF1TXd1sWvrm0kfQvGGIy1zek2nojRF7wk6JEgCXhPeT8yp4dICS07HCFUjICKEVAxAipGQMUIqBgBFSOgYgRSKqagsI5a24b3UFW9czpGiaGuvo/rLyY+J/chdXSOUVd3wClGofiNWFwjtv5pH93Mr7LGuklKxWRmFfMfjQWEwkt8jWIU+l73jXM1zpQREPtx4gs1NQ+yjJ7eIJ3PKOBzEu5xqn7rDzHZl0utsbu/+7CkVIwBxScsxNzjlIz75pYhPkRi0aYNu2z3WBZT1clyBwbDvGukWDfxRAx2CYRc85XRZCjqLPBV+wgtxdYpEFigwtv13Ib/FqCcGZ6K0cXMImcOW6ybpF2MKVK9G5rmnAMxbduLNLFnz+XTi0a/U3/Bjqmt62UBLa3DTpwtdnffYUm7mOI7DSyj5G4j55zK6i7u892ocIrc2EloQ5I1OQYLR55CPITYYs33uUHaxSDpAtOHpImfC3bQzOwKTU3HKBJJcP5BvxGD66Li59zfvf0kssW6SVrEHEVUjICKEVAxAipGQMUIqBgBFSOgYgRUjICKEVAxAipGQMUIqBgBFSOgYgRUjICKEVAxAipGQMUI7IjZoj8mBENxVHYF+gAAAABJRU5ErkJggg==" InformativeScreenshot="ee337963467d337e4482fe7b5d8f71fc.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(54) Revature' /&gt;" SearchSteps="FuzzySelector, Image" Text="Tasks" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='A' type='' /&gt;">
                 <uix:TargetAnchorable.Anchors>
-                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                     <uix:Target DesignTimeRectangle="13, 304, 56, 16" ElementType="Text" FriendlyName="'Tasks'" FullSelectorArgument="&lt;webctrl aaname='Tasks' parentid='navigationList' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Tasks' parentid='navigationList' tag='SPAN' type='' check:text='Tasks' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADwAAAAUCAYAAADRA14pAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAG5SURBVFhH7ZRLSwJRFMf7PtEmWtYiJAjbGKE2RUIooRZETx+VRqX5KB+ZkJlmNlr5KrNCRaKNn+vkOTGDwbRxnEXjLP5w7z3/mXt+99x7hoZHNDBIUoDlLgVY7lKA5S7RwEaTCwLB9C85nFGKMQu74HLHQTVl4v1a3SaEwlmIRFlYNh7Qms0eIi+O0es+jMOSwSHoFSvRwOoZCyWDiRWKDRrrmW2KXcbzUG+0wbn3cwDofXj8AK8vSZAXsRxMqoxwz9ZoPjqmg6tEgaSZXRf0du/di/p2pb2nSUqQm2v1WzT3+VNwm3khGG4Nb0X3twTsCNOhXSeLVOW/vGIlGTBWFUHnmR14KtT5xM/OM9BotoFl38C04qa1XP4dqq+fUCw1YVpt5v8h5BUrSYCxmnfZKtykyvSmETjYSZ7zjk8Y4MSTgEqlRZXECu+7YgTmD6R5n5C3O9aLJAG2WI8JcnXNQ2/a7oxQjFm0wZx2gzxYeVzD5sS9YQTCPoB+BBXycvv1KkmAsVmhuBg2G7y2WPHKcwtK5SbUal/0vjHOAePYbDmieLTTmYW8YtU34P8iBVjuUoDlrgED1sA3w7FJsAGNo6YAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" Text="Tasks" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='SPAN' type='' /&gt;" />
                   </scg:List>
                 </uix:TargetAnchorable.Anchors>
