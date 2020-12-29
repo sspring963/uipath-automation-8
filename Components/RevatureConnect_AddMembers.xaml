@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1138,3011.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>740.8,2596</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AddMembers_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -86,7 +86,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow bulk adds all the members to the Zoho Board. It takes in as input the filepath of the .csv file containing the emails and the UiElement of the Zoho Board in order to attach the browser. It outputs an argument that contains the emails that were not able to be added in a datatable.&#xA;&#xA;Preconditions: the Add Members window should be open on the Microsoft Edge browser." DisplayName="AddMembers" sap:VirtualizedContainerService.HintSize="556.666666666667,2906.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow bulk adds all the members to the Zoho Board. It takes in as input the filepath of the .csv file containing the emails and the UiElement of the Zoho Board in order to attach the browser. It outputs an argument that contains the emails that were not able to be added in a datatable.&#xA;&#xA;Preconditions: the Add Members window should be open on the Microsoft Edge browser." DisplayName="AddMembers" sap:VirtualizedContainerService.HintSize="550.4,2491.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -94,27 +94,27 @@
         <x:Boolean x:Key="IsPinned">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="514.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Adding Memebers&quot;]">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="508.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Adding Members&quot;]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Attach Microsoft Edge Browser with the Zoho Board webpage using the io_Browser  argument" AttachMode="ByInstance" DisplayName="Use Browser Edge: Revature Connect" sap:VirtualizedContainerService.HintSize="514.666666666667,2568" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InUiElement="[io_Browser]" InteractionMode="Simulate" OutUiElement="[io_Browser]" Version="V1">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Attach Microsoft Edge Browser with the Zoho Board webpage using the io_Browser  argument" AttachMode="ByInstance" DisplayName="Use Browser Edge: Revature Connect" sap:VirtualizedContainerService.HintSize="508.8,2157.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InUiElement="[io_Browser]" InteractionMode="Simulate" OutUiElement="[io_Browser]" Version="V1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Add Members from .csv file" sap:VirtualizedContainerService.HintSize="480.666666666667,2264.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Add Members from .csv file" sap:VirtualizedContainerService.HintSize="475.2,1856.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ClickType="Single" DisplayName="Click 'Bulk Import'" sap:VirtualizedContainerService.HintSize="438.666666666667,168" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+            <uix:NClick ClickType="Single" DisplayName="Click 'Bulk Import'" sap:VirtualizedContainerService.HintSize="433.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://connect.revature.net/board/foo/section" DesignTimeRectangle="1184, 236, 102, 27" FriendlyName="'Bulk Import'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;i' parentid='groupMemberPopup' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;i' parentid='groupMemberPopup' tag='I' type='' aaname='Bulk Import' check:text='Bulk Import' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAAfCAYAAAAPzljlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAUQSURBVGhD7ZmLcxNFHMf9M1UGGR3HB5RaQcbxgYA6gwriCxFFVOSh8hAGkGGQQVArglY6WAs0TfpMW0jfadOENP15n19vm831rmlCohxz35md9PZ27/b3++z+9rfXhyRSKBSBCokiUCFRBCokikCFRBGokKgE1OzsnFy/MS2/Xp0sKbfiMzKRnpW5Obdhldr77W154Y1u6erN6jW/XFNfjYZH8zq+m/GMW/PgqgRUZqYgm7b3ycOrO3zL0y/G5ecrk1UD+2DvoDyxvlNiXTN6zS/X1FejK9fSOq5q+99vYuIGTTpfUI+v65SWv6dkZCyvpX8wJyfPjapTVzbG5FrblNujMkWggkU0e+eTZKAtvqBsZ9q60Dwhj6zpkJ1fVeeYCFSwpjMF2bittzagjGO37OiTmWxBQyB719jErBQKbiNX+fycjI3n9ZlGlYCiH6s5dzc4zvqBor0Zjxmf9zlmbH7Pt/sjxtHpjDM5lNN+QaKfiUBT0x5nONJ3Os81z2BcN2IZBYTo1/BqojagWq5PyYq1MTl0IqXXpj0v4EW2DISjP4y4NcsHdbU1rfWs3Gwu2Dl+oKhj1f/024S8++mA/k2bp5z9tSMxI63t0/o3dZRVTTFp/nPS7V3sf7klLd+dHJZHG4p79JpXEhLvKfUL49t35I5uCaYd/VkdQ6m7bquircfPjmgxz91/LKXJFPdMf1Ns3y0LFDOTATZu7JL1r3fLbXcA9QBFhvnkhrhs251cmG1BCgJF3crnYvKNM6FSI3ndoBn7ui3dstb5PXJ6uKQecN3985mo6b+qqVPe3pWU3mRWbTt7cUyhYj8rA7E6du0bUjC79w+pX2hLwoUNTZu6FnxlbCUaPfNSQr48fEfOXRqX9o6MJhH46TFnzAA22TbvNvIFZYh6y/ufD0h6an6QqNagDCSMKQcJLQWKWW5np6ww6nd8NqAbt9Hp86Naz31k+n/4xWBJqONZB75PKZRLl+fbEroA6m2LgGVHH2Mr7dtuTmudLa8vvPIFBVkcbMhCHgOZUY2vdelZy25fC1DMHmb3ZgeSPRmW0lKg7Pei5dYHtUNkuzh/z6H5c9/hU8MK7ve/0nptizMefmGFMOmMrWR29kQxqgqU7UxbvcmcPOss2+c3O8vfTRRqAQrHUAhXrf8snm1B+q9BeZ3ptceW1zfevl6Vu18RKJb/e3sGdMW13crUDBT7UaInqzHdjuvlFIEKeLk5lNUalBkcsZsYXos9qh6gCHGEuhNO1ob4pa2dNRqRrKx+ObFwlCkHotz9ikC1O5snm70JfQYcdd19xQyFlXfR2XCJ55WAot+xMyPqDDIzOxnwUz1BeZMRkoXtzspnIpFEIGzG9q0f9S86Rpy5MKZ2mOfWBRQOfuvjpKaeplBP7u89d5ABMaANb/boigAm2SEvpX0loJBJeTmXNP+xeKbaqicoxk7KzeczbNq6s1/tpM4kA2ZirWiI6X3a0f7g8ZT6yY4M5UCY5IMc4Pwv43qGYyxGvqAYqLfwEtLQvoGc23peOPbro8UDHwaSIfY45xKyuEpBIYzDSGYrKXuQjFPrAYrMjnMUcLjm+ycHVW8azhcMogcfrGlHwRf0t8N3OVBAtw/CvO/Uj6MLX0hKQN2LMIBw6P0kEzZ5wXk/KS0lJvq9/jso6H01A/WgKGjl/d+KQHkUgQqJzH+N7e9s94MiUCFRBCokikCFRBGokCgCFRJFoEIhkX8Bb7rRLV8w+lIAAAAASUVORK5CYII=" InformativeScreenshot="f1cc7e88ba0ced7ac91753e7e4cf904d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(54) Tasks - Revature' /&gt;" SearchSteps="FuzzySelector, Image" Text="Bulk Import" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='I' type='' /&gt;" />
               </uix:NClick.Target>
@@ -124,7 +124,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NClick ClickType="Single" DisplayName="Click 'Upload CSV'" sap:VirtualizedContainerService.HintSize="438.666666666667,168" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left">
+            <uix:NClick ClickType="Single" DisplayName="Click 'Upload CSV'" sap:VirtualizedContainerService.HintSize="433.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="WindowMessages" KeyModifiers="None" MouseButton="Left">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://connect.revature.net/board/foo/section" DesignTimeRectangle="544, 389, 132, 45" ElementType="Text" FriendlyName="'Upload CSV'" FullSelectorArgument="&lt;webctrl parentid='inviteUsersPopup' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='inviteUsersPopup' tag='LABEL' type='' aaname='Upload CSV' check:text='Upload CSV' /&gt;" ImageBase64="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" InformativeScreenshot="5711ebb5ddac67ace40d22d56b02d420.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(54) Tasks - Revature' /&gt;" SearchSteps="FuzzySelector, Image" Text="Upload CSV" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='LABEL' type='' /&gt;" />
               </uix:NClick.Target>
@@ -134,20 +134,20 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NClick>
-            <uix:NApplicationCard sap2010:Annotation.AnnotationText="Attach the file explorer page that opens." AttachMode="ByInstance" DisplayName="Use Application: File Explorer" sap:VirtualizedContainerService.HintSize="438.666666666667,928.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
+            <uix:NApplicationCard sap2010:Annotation.AnnotationText="Attach the file explorer page that opens." AttachMode="ByInstance" DisplayName="Use Application: File Explorer" sap:VirtualizedContainerService.HintSize="433.6,936" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Open .csv file" sap:VirtualizedContainerService.HintSize="376,563.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence DisplayName="Open .csv file" sap:VirtualizedContainerService.HintSize="375.2,573.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="{x:Null}" sap2010:Annotation.AnnotationText="Type in the file path of the csv file containing the emails" ClickBeforeMode="None" DisplayName="Type Into 'Filename:'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,260.666666666667" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" Text="[in_FilePath]">
+                    <uix:NTypeInto ActivateBefore="{x:Null}" sap2010:Annotation.AnnotationText="Type in the file path of the csv file containing the emails" ClickBeforeMode="None" DisplayName="Type Into 'Filename:'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,272" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="Simulate" Text="[in_FilePath]">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="287, 705, 787, 25" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAxcAAAAdCAYAAADYU5HHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAACySURBVHhe7dcxEQAwCAAx/JumGwJ6PyYuMgsAABCQCwAAIHG5mPEMAADgn1wAAAAJuQAAABJyAQAAJOQCAABIyAUAAJCQCwAAICEXAABAQi4AAICEXAAAAAm5AAAAEnIBAAAk5AIAAEjIBQAAkJALAAAgIRcAAEBCLgAAgIRcAAAACbkAAAAScgEAACTkAgAASMgFAACQkAsAACAhFwAAQEIuAACAhFEAAAAJuQAAAAK7D0Puz7yaFIrDAAAAAElFTkSuQmCC" InformativeScreenshot="139a2aaed91e7ad13ee950d8248cc3fb.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
                           <uix:TargetAnchorable.Anchors>
@@ -164,7 +164,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NTypeInto>
-                    <uix:NClick ClickType="Single" DisplayName="Click 'Open'" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Open'" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="1121, 742, 132, 39" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' check:text='unchecked' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIgAAAArCAYAAACjMsASAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAG6SURBVHhe7djBmYMgEEBhe7IbK9mbrdiKVezZDuyAXQWVgWGWTS4G3+E/oMYceB+QdOu6OqCEQGAiEJhEIN3XN0AgsIkmxCA8sCwLHohAYCIQmAgEJgKBiUBgIhCYCAQmAoGJQGAiEJiaDmQaOtd1iWFSn4WuzUDm0fV7EIObxL3Zjf12vXfjHF9HSYOBTG74Y6XwK0saDzTNBTKPfcXk+4j6cVbuIdZYIGELqThn7KtIP7o5jK+wjm3oMkz5569tLIjetTnfnzz3aVE2Fkj9ypCuNH68TaI8nxzXRSRh0q/vycM8D8hxONOQv+vm2gokTFzNBJQC0T4rV5vCKrVP/hWXDyQ9DNevcHfRZCCvryD62UXcK0WYXE+3sEPp+l21FUjFL5hDOlH/DcRvRzkCubl9AgoTfcnPKm+vIAkCua3X/gfxEWh/oKXnhrpzBIHc2bENZBMRJlcJwQey3ZPhaDHpv0Z+w4y+j0A+gJ9cqXSAPbeR7IyRxHEIkcTiYAikMdYZ5MkIJCAQHYEEBKIjkIBAdAQCE4HARCAwEQhMBAJTdSB4NtGEGCgP43lEE/EASBEITAQCw+p+AEwW3D+Ci8k6AAAAAElFTkSuQmCC" InformativeScreenshot="7ba0d5e2a5b19e0653a5a3a3637da1bc.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Text="unchecked" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
                       </uix:NClick.Target>
@@ -187,7 +187,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NApplicationCard>
-            <TryCatch sap2010:Annotation.AnnotationText="Tries to click the 'Add Members' button but if no emails were found in the csv file, then the 'Add Members' button is not found. " DisplayName="Try Catch - Clicking Add Members" sap:VirtualizedContainerService.HintSize="438.666666666667,785.333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+            <TryCatch sap2010:Annotation.AnnotationText="Tries to click the 'Add Members' button but if no emails were found in the csv file, then the 'Add Members' button is not found. " DisplayName="Try Catch - Clicking Add Members" sap:VirtualizedContainerService.HintSize="433.6,372" sap2010:WorkflowViewState.IdRef="TryCatch_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -195,14 +195,14 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <Sequence DisplayName="Add detected emails to board" sap:VirtualizedContainerService.HintSize="376,502" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Add detected emails to board" sap:VirtualizedContainerService.HintSize="375.2,500" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'Add Members'" sap:VirtualizedContainerService.HintSize="334,168" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Add Members'" sap:VirtualizedContainerService.HintSize="333.6,167.2" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://connect.revature.net/board/foo/section" DesignTimeRectangle="1190, 551, 178, 48" ElementType="Button" FriendlyName="'Add Members'" FullSelectorArgument="&lt;webctrl aaname='Add Members' parentid='inviteUsersPopup' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Add Members' parentid='inviteUsersPopup' tag='BUTTON' type='' check:text='Add Members' /&gt;" ImageBase64="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" InformativeScreenshot="ba3b65175b4d90a659df073f1b97de44.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(54) Tasks - Revature' /&gt;" SearchSteps="FuzzySelector, Image" Text="Add Members" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='BUTTON' type='' /&gt;" />
                     </uix:NClick.Target>
@@ -212,7 +212,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <uix:NExtractData sap2010:Annotation.AnnotationText="Extract the emails that were not able to be added. " AppendResults="False" ContinueOnError="True" DataTable="[out_InvalidEmails]" DisplayName="Extract Table Data" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Emails' attr='text'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='span' idx='1'/&gt;&lt;webctrl tag='span' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,199.333333333333" sap2010:WorkflowViewState.IdRef="NExtractData_3" InteractionMode="Simulate" MaximumResults="100">
+                  <uix:NExtractData sap2010:Annotation.AnnotationText="Extract the emails that were not able to be added. " AppendResults="False" ContinueOnError="True" DataTable="[out_InvalidEmails]" DisplayName="Extract Table Data" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Emails' attr='text'&gt;&lt;webctrl tag='li'/&gt;&lt;webctrl tag='div' idx='1'/&gt;&lt;webctrl tag='span' idx='1'/&gt;&lt;webctrl tag='span' idx='1'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="333.6,198.4" sap2010:WorkflowViewState.IdRef="NExtractData_3" InteractionMode="Simulate" MaximumResults="100">
                     <uix:NExtractData.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="544, 381, 825, 135" ElementType="List" FriendlyName="'UL'" FullSelectorArgument="&lt;webctrl parentid='inviteUsersPopup' tag='UL' /&gt;" InformativeScreenshot="5ed711e34ff39fc7068a106c74aa80c8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='(54) Tasks - Revature' /&gt;" SearchSteps="Selector" />
                     </uix:NExtractData.Target>
@@ -226,18 +226,18 @@
                 </Sequence>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404.666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,163.2" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ActivityAction x:TypeArguments="s:Exception">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <ui:LogMessage DisplayName="Log Message - No emails detected in csv file" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;No emails were found in the csv file&quot;]">
+                    <ui:LogMessage DisplayName="Log Message - No emails detected in csv file" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn" Message="[&quot;No emails were found in the csv file.&quot;]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsPinned">True</x:Boolean>
