@@ -14,8 +14,8 @@ This workflow is designed to set up a Zoho Board and adding user emails to said 
 
 ## Getting Started
 To Clone: `git clone https://github.com/UiPath-Project3-1/uipath-automation-8.git`
+- You will need a valid Revature Connect account for the robot to login to and create the board with.
 - You will need an **csv** file which contains one column with the header *Emails*. The values in the *Emails* column should be the email addresses of the users you wish to add to your Zoho Board.
-- You will need to setup your user credentials for Zoho by navigating to **Windows Credentials** from your Start Menu. From there, click **Add a generic credential**. Within the *Internet or network address* field, please use `https://connect.revature.net/`. Fill in the *User name* and *Password* fields with your Zoho credentials then click **OK**.
 
 ## Usage
 - To run this project from UiPath Studio, follow these steps:
