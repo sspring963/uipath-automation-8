@@ -1,6 +1,6 @@
 {
-  "name": "P3 Zoho Board Automation",
-  "description": "Automation to produce Zoho board for P3 management",
+  "name": "Create Revature Connect Board",
+  "description": "Creates a board on Revature Connect and adds users by their email. Requires a valid Zoho account for Revature Connect, the name of the board, and a csv file containing the emails for each user to add.",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Credentials.Activities": "[1.1.6479.13204]",
